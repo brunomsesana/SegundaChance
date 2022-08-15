@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     [SerializeField] TMPro.TMP_Text text;
     [SerializeField] bool useTimer;
     [SerializeField] string[] quests;
+    [SerializeField] List<bool> questsb;
     [SerializeField] bool useQuests;
     [SerializeField] TMPro.TMP_Text showQuests;
     // Start is called before the first frame update
@@ -40,9 +41,19 @@ public class GameController : MonoBehaviour
         }
         if (useQuests)
         {
-            foreach (string quest in quests)
+            showQuests.text = "";
+            for (int i = 0; i < quests.Length; i++)
             {
-                showQuests.text += "\n" + quest;
+                if (i < questsb.Count)
+                {
+                    if (!questsb[i])
+                    {
+                        showQuests.text += "\n" + quests[i];
+                    }
+                } else
+                {
+                    questsb.Add(false);
+                }
             }
         }
     }
