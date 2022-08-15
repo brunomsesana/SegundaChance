@@ -38,7 +38,7 @@ public class Fonts : MonoBehaviour
             text.fontSize = FontSize.fontSize / divisor;
         } else if (whatis == "image")
         {
-            gmo.transform.localScale = new Vector2(FontSize.fontSize / 10 * 0.1f, FontSize.fontSize / 10 * 0.1f);
+            gmo.transform.localScale = new Vector2(FontSize.fontSize / 100f , FontSize.fontSize / 100f);
         }
     }
 }

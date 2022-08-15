@@ -7,7 +7,8 @@ using DigitalRuby.SimpleLUT;
 public class sliderScript : MonoBehaviour
 {
     Slider slider;
-    public GameObject MainCam;
+    [SerializeField] bool brightness;
+    [SerializeField] bool volume;
 
     private void Awake()
     {
@@ -16,7 +17,14 @@ public class sliderScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (brightness)
+        {
+            slider.value = Bright.brightness * 100f;
+        }
+        if (volume)
+        {
+            slider.value = AudioListener.volume * 100;
+        }
     }
 
     // Update is called once per frame

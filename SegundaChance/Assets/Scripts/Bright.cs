@@ -7,7 +7,7 @@ using DigitalRuby.SimpleLUT;
 public class Bright : MonoBehaviour
 {
     public GameObject MainCam;
-    static float brightness = 0;
+    public static float brightness = 0;
 
     private void Awake()
     {
