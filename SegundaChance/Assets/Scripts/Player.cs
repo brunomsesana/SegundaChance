@@ -12,12 +12,14 @@ public class Player : MonoBehaviour
     [SerializeField] LayerMask colLayer;
     [SerializeField] GameObject pauseMenu;
     Animator anim;
+    SpriteRenderer spr;
 
     private void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
         control = new Controls();
         anim = GetComponent<Animator>();
+        spr = GetComponent<SpriteRenderer>();
     }
     private void OnEnable()
     {
@@ -42,35 +44,35 @@ public class Player : MonoBehaviour
         {
             if (control.Player.YAxis.ReadValue<float>() != 0)
             {
-                if (control.Player.YAxis.ReadValue<float>() > 0)
+                if (!cols[0].IsTouchingLayers(colLayer))
                 {
-                    if (!cols[0].IsTouchingLayers(colLayer))
+                    if (control.Player.YAxis.ReadValue<float>() > 0)
                     {
-                        movePoint.position += new Vector3(0f, 2f, 0f);
+                        movePoint.position += new Vector3(0f, 1f, 0f);
                     }
                 }
-                if (control.Player.YAxis.ReadValue<float>() < 0)
+                if (!cols[1].IsTouchingLayers(colLayer))
                 {
-                    if (!cols[1].IsTouchingLayers(colLayer))
+                    if (control.Player.YAxis.ReadValue<float>() < 0)
                     {
-                        movePoint.position += new Vector3(0f, -2f, 0f);
+                        movePoint.position += new Vector3(0f, -1f, 0f);
                     }
                 }
             }
             else
             {
-                if (control.Player.XAxis.ReadValue<float>() > 0)
+                if (!cols[2].IsTouchingLayers(colLayer))
                 {
-                    if (!cols[2].IsTouchingLayers(colLayer))
+                    if (control.Player.XAxis.ReadValue<float>() > 0)
                     {
-                        movePoint.position += new Vector3(2f, 0f, 0f);
+                        movePoint.position += new Vector3(1f, 0f, 0f);
                     }
                 }
-                if (control.Player.XAxis.ReadValue<float>() < 0)
+                if (!cols[3].IsTouchingLayers(colLayer))
                 {
-                    if (!cols[3].IsTouchingLayers(colLayer))
+                    if (control.Player.XAxis.ReadValue<float>() < 0)
                     {
-                        movePoint.position += new Vector3(-2f, 0f, 0f);
+                        movePoint.position += new Vector3(-1f, 0f, 0f);
                     }
                 }
             }
@@ -81,6 +83,21 @@ public class Player : MonoBehaviour
         } else
         {
             anim.SetBool("Andando", true);
+        }
+        if (transform.position.x > movePoint.position.x)
+        {
+            anim.SetInteger("Lado", 2);
+            spr.flipX = true;
+        } else if (transform.position.x < movePoint.position.x)
+        {
+            anim.SetInteger("Lado", 2);
+            spr.flipX = false;
+        } else if (transform.position.y > movePoint.position.y)
+        {
+            anim.SetInteger("Lado", 1);
+        } else if (transform.position.y < movePoint.position.y)
+        {
+            anim.SetInteger("Lado", 3);
         }
         if (control.Player.Pause.triggered)
         {

@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     [SerializeField] List<bool> questsb;
     [SerializeField] bool useQuests;
     [SerializeField] TMPro.TMP_Text showQuests;
+    [SerializeField] float timerp = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,21 +23,36 @@ public class GameController : MonoBehaviour
     {
         if (useTimer)
         {
-            if (timer > 0)
+            if ((int)timer > 0)
             {
                 timer -= Time.deltaTime;
+            } else
+            {
+                timer = 0;
             }
-            if (timer <= 31)
+            if ((int)timer <= 10 && (int)timer > 0)
+            {
+                text.GetComponent<Fonts>().enabled = false;
+                text.fontSize += 0.02f * Time.deltaTime * 1000;
+            }
+            if (timer <= 31 && (int)timer > 0)
             {
                 text.color = Color.red;
             }
-            if (timer <= 60)
+            text.text = string.Format("{0:00}:{1:00}", (int)(timer / 60), (int)(timer % 60));
+            if ((int)timer <= 0)
             {
-                text.text = string.Format("{0:00}:{1:00}", (int)(timer % 60), (int)(timer * 100 % 100));
-            }
-            else
-            {
-                text.text = string.Format("{0:00}:{1:00}", (int)(timer / 60), (int)(timer % 60));
+                timerp -= Time.deltaTime;
+                if (timerp <= 0 && text.color == new Color(1, 0, 0, 1))
+                {
+                    text.color = new Color(0, 0, 0, 0);
+                    timerp = 0.5f;
+                }
+                if (timerp <= 0 && text.color == new Color(0, 0, 0, 0))
+                {
+                    text.color = new Color(1, 0, 0, 1);
+                    timerp = 0.5f;
+                }
             }
         }
         if (useQuests)

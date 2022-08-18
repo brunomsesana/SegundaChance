@@ -25,8 +25,8 @@ public class RoomChanger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Vector3 pos = new Vector3(rC.transform.position.x + posMod, rC.transform.position.y, rC.transform.position.z);
-            collision.transform.parent.position = pos;
-            collision.transform.parent.GetComponent<Player>().movePoint.position = pos;
+            collision.transform.position = pos;
+            collision.transform.GetComponent<Player>().movePoint.position = pos;
             thisVCam.enabled = false;
             nextVCam.enabled = true;
         }
