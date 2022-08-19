@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody2D rig;
     Controls control;
     [SerializeField] float speed;
     public Transform movePoint;
     [SerializeField] Collider2D[] cols;
     [SerializeField] LayerMask colLayer;
+    [SerializeField] LayerMask questsLayer;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameController cont;
+    [SerializeField] UnityEngine.UI.Slider slider;
+    bool questStarted;
+    public string quest;
+    public float questTimer;
+    [SerializeField] float value;
     Animator anim;
     SpriteRenderer spr;
 
     private void Awake()
     {
-        rig = GetComponent<Rigidbody2D>();
         control = new Controls();
         anim = GetComponent<Animator>();
         spr = GetComponent<SpriteRenderer>();
@@ -38,6 +43,40 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        value = -questTimer;
+        if (control.Player.Interate.triggered)
+        {
+            questStarted = true;
+        }
+        if (questTimer > 0)
+        {   
+            if (questStarted)
+            {
+                questTimer -= Time.deltaTime;
+                control.Disable();
+                slider.gameObject.SetActive(true);
+                slider.value = value;
+            }
+        } else
+        {
+            slider.gameObject.SetActive(false);
+            questTimer = 0;
+            if (quest == "brush")
+            {
+                cont.questsb[0] = true;
+                quest = "none";
+            } else if (quest == "change")
+            {
+                cont.questsb[1] = true;
+                quest = "none";
+            } else if (quest == "shave")
+            {
+                cont.questsb[2] = true;
+                quest = "none";
+            }
+            questStarted = false;
+            control.Enable();
+        }
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, speed * Time.deltaTime);
         //rig.velocity = new Vector2(control.Player.XAxis.ReadValue<float>() * speed, control.Player.YAxis.ReadValue<float>() * speed);
         if (Vector3.Distance(transform.position, movePoint.position) == 0f)

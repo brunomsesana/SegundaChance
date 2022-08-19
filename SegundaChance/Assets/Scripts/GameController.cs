@@ -8,10 +8,13 @@ public class GameController : MonoBehaviour
     [SerializeField] TMPro.TMP_Text text;
     [SerializeField] bool useTimer;
     [SerializeField] string[] quests;
-    [SerializeField] List<bool> questsb;
+    public List<bool> questsb;
     [SerializeField] bool useQuests;
     [SerializeField] TMPro.TMP_Text showQuests;
-    [SerializeField] float timerp = 0.5f;
+    [SerializeField] RuntimeAnimatorController animCont;
+    float timerp = 0.5f;
+    float timerf = 2f;
+    bool started;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +46,7 @@ public class GameController : MonoBehaviour
             if ((int)timer <= 0)
             {
                 timerp -= Time.deltaTime;
+                timerf -= Time.deltaTime;
                 if (timerp <= 0 && text.color == new Color(1, 0, 0, 1))
                 {
                     text.color = new Color(0, 0, 0, 0);
@@ -52,6 +56,14 @@ public class GameController : MonoBehaviour
                 {
                     text.color = new Color(1, 0, 0, 1);
                     timerp = 0.5f;
+                }
+                if (timerf <= 0 && !started)
+                {
+                    GameObject.Find("Player").transform.position = new Vector2(19, -11);
+                    GameObject.Find("PlayerMovePoint").transform.position = new Vector2(19, -11);
+                    GameObject.Find("Player").GetComponent<Animator>().runtimeAnimatorController = animCont;
+                    GetComponent<CutsceneController>().Play();
+                    started = true;
                 }
             }
         }

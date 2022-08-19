@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Exit : MonoBehaviour
 {
+    [SerializeField] GameController cont;
+    bool quest;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +19,20 @@ public class Exit : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (collision.CompareTag("Player"))
+        quest = true;
+        foreach (bool quest in cont.questsb)
         {
-            GameController.SceneChange("Rua");
+            if (!quest)
+            {
+                this.quest = false;
+            }
+        }
+        if (quest)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                GameController.SceneChange("Rua");
+            }
         }
     }
 }

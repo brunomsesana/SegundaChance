@@ -53,6 +53,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interate"",
+                    ""type"": ""Button"",
+                    ""id"": ""a180924f-2674-440f-82c1-96e3af718d1e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -242,6 +251,56 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""441edba7-73c5-4abb-a1e0-35614340725b"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9473a053-df0a-41c3-8c7d-965f8d8f5194"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Timelines"",
+            ""id"": ""3087c8f2-51e4-43bf-8d0b-093006e0bd88"",
+            ""actions"": [
+                {
+                    ""name"": ""Unpause"",
+                    ""type"": ""Button"",
+                    ""id"": ""3e9adbb8-ca22-4af4-ac30-51fe5da65007"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""8b7094dd-2879-4f73-ac6a-e8ed54541fcf"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Unpause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -253,6 +312,10 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_XAxis = m_Player.FindAction("XAxis", throwIfNotFound: true);
         m_Player_YAxis = m_Player.FindAction("YAxis", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_Interate = m_Player.FindAction("Interate", throwIfNotFound: true);
+        // Timelines
+        m_Timelines = asset.FindActionMap("Timelines", throwIfNotFound: true);
+        m_Timelines_Unpause = m_Timelines.FindAction("Unpause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -315,6 +378,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_XAxis;
     private readonly InputAction m_Player_YAxis;
     private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_Interate;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -322,6 +386,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @XAxis => m_Wrapper.m_Player_XAxis;
         public InputAction @YAxis => m_Wrapper.m_Player_YAxis;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        public InputAction @Interate => m_Wrapper.m_Player_Interate;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -340,6 +405,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Interate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInterate;
+                @Interate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInterate;
+                @Interate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInterate;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -353,14 +421,55 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
+                @Interate.started += instance.OnInterate;
+                @Interate.performed += instance.OnInterate;
+                @Interate.canceled += instance.OnInterate;
             }
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Timelines
+    private readonly InputActionMap m_Timelines;
+    private ITimelinesActions m_TimelinesActionsCallbackInterface;
+    private readonly InputAction m_Timelines_Unpause;
+    public struct TimelinesActions
+    {
+        private @Controls m_Wrapper;
+        public TimelinesActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Unpause => m_Wrapper.m_Timelines_Unpause;
+        public InputActionMap Get() { return m_Wrapper.m_Timelines; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(TimelinesActions set) { return set.Get(); }
+        public void SetCallbacks(ITimelinesActions instance)
+        {
+            if (m_Wrapper.m_TimelinesActionsCallbackInterface != null)
+            {
+                @Unpause.started -= m_Wrapper.m_TimelinesActionsCallbackInterface.OnUnpause;
+                @Unpause.performed -= m_Wrapper.m_TimelinesActionsCallbackInterface.OnUnpause;
+                @Unpause.canceled -= m_Wrapper.m_TimelinesActionsCallbackInterface.OnUnpause;
+            }
+            m_Wrapper.m_TimelinesActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Unpause.started += instance.OnUnpause;
+                @Unpause.performed += instance.OnUnpause;
+                @Unpause.canceled += instance.OnUnpause;
+            }
+        }
+    }
+    public TimelinesActions @Timelines => new TimelinesActions(this);
     public interface IPlayerActions
     {
         void OnXAxis(InputAction.CallbackContext context);
         void OnYAxis(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnInterate(InputAction.CallbackContext context);
+    }
+    public interface ITimelinesActions
+    {
+        void OnUnpause(InputAction.CallbackContext context);
     }
 }
