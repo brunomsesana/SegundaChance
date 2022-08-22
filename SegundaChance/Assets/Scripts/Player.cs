@@ -68,8 +68,9 @@ public class Player : MonoBehaviour
             } else if (quest == "change")
             {
                 cont.questsb[1] = true;
+                anim.SetBool("Uniforme", true);
                 quest = "none";
-            } else if (quest == "shave")
+            } else if (quest == "eat")
             {
                 cont.questsb[2] = true;
                 quest = "none";
