@@ -63,16 +63,16 @@ public class Player : MonoBehaviour
             questTimer = 0;
             if (quest == "brush")
             {
-                cont.questsb[0] = true;
+                cont.questsb[2] = true;
                 quest = "none";
             } else if (quest == "change")
             {
-                cont.questsb[1] = true;
+                cont.questsb[0] = true;
                 anim.SetBool("Uniforme", true);
                 quest = "none";
             } else if (quest == "eat")
             {
-                cont.questsb[2] = true;
+                cont.questsb[1] = true;
                 quest = "none";
             }
             questStarted = false;

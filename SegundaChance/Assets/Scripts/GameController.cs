@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     float timerp = 0.5f;
     float timerf = 2f;
     bool started;
+    bool questsfinished = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +71,7 @@ public class GameController : MonoBehaviour
         if (useQuests)
         {
             showQuests.text = "";
+            questsfinished = true;
             for (int i = 0; i < quests.Length; i++)
             {
                 if (i < questsb.Count)
@@ -82,6 +84,17 @@ public class GameController : MonoBehaviour
                 {
                     questsb.Add(false);
                 }
+            }
+            foreach (bool q in questsb)
+            {
+                if (!q)
+                {
+                    questsfinished = false;
+                }
+            }
+            if (questsfinished)
+            {
+                showQuests.text = "\n- Sair";
             }
         }
     }

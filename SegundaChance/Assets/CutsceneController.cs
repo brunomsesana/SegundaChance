@@ -9,6 +9,10 @@ public class CutsceneController : MonoBehaviour
     bool paused;
     Controls control;
     public GameObject[] falas;
+    public GameObject player;
+    public GameObject playerMovePoint;
+    public Vector3 playerPos;
+    public Vector3 finalPos;
     private void OnEnable()
     {
         control.Enable();
@@ -33,6 +37,8 @@ public class CutsceneController : MonoBehaviour
     {
         if (paused)
         {
+            player.transform.position = playerPos;
+            playerMovePoint.transform.position = finalPos;
             if (control.Timelines.Unpause.triggered)
             {
                 timel.Resume();
