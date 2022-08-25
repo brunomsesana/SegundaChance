@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameController cont;
     [SerializeField] UnityEngine.UI.Slider slider;
     bool questStarted;
+    public bool useQuests;
     public string quest;
     public float questTimer;
     [SerializeField] float value;
@@ -43,40 +44,43 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        value = -questTimer;
-        if (control.Player.Interate.triggered)
+        if (useQuests)
         {
-            questStarted = true;
-        }
-        if (questTimer > 0)
-        {   
-            if (questStarted)
+            value = -questTimer;
+            if (control.Player.Interate.triggered)
             {
-                questTimer -= Time.deltaTime;
-                control.Disable();
-                slider.gameObject.SetActive(true);
-                slider.value = value;
+                questStarted = true;
             }
-        } else
-        {
-            slider.gameObject.SetActive(false);
-            questTimer = 0;
-            if (quest == "brush")
+            if (questTimer > 0)
+            {   
+                if (questStarted)
+                {
+                    questTimer -= Time.deltaTime;
+                    control.Disable();
+                    slider.gameObject.SetActive(true);
+                    slider.value = value;
+                }
+            } else
             {
-                cont.questsb[2] = true;
-                quest = "none";
-            } else if (quest == "change")
-            {
-                cont.questsb[0] = true;
-                anim.SetBool("Uniforme", true);
-                quest = "none";
-            } else if (quest == "eat")
-            {
-                cont.questsb[1] = true;
-                quest = "none";
+                slider.gameObject.SetActive(false);
+                questTimer = 0;
+                if (quest == "brush")
+                {
+                    cont.questsb[2] = true;
+                    quest = "none";
+                } else if (quest == "change")
+                {
+                    cont.questsb[0] = true;
+                    anim.SetBool("Uniforme", true);
+                    quest = "none";
+                } else if (quest == "eat")
+                {
+                    cont.questsb[1] = true;
+                    quest = "none";
+                }
+                questStarted = false;
+                control.Enable();
             }
-            questStarted = false;
-            control.Enable();
         }
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, speed * Time.deltaTime);
         //rig.velocity = new Vector2(control.Player.XAxis.ReadValue<float>() * speed, control.Player.YAxis.ReadValue<float>() * speed);
