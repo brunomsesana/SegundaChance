@@ -110,4 +110,11 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+    public void finishQuests()
+    {
+        for (int i = 0; i < questsb.Count; i++)
+        {
+            questsb[i] = true;
+        }
+    }
 }

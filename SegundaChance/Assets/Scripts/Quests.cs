@@ -20,6 +20,7 @@ public class Quests : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            collision.GetComponent<Player>().questing = true;
             collision.GetComponent<Player>().quest = quest;
             collision.GetComponent<Player>().questTimer = 5f;
         }
@@ -28,6 +29,7 @@ public class Quests : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            collision.GetComponent<Player>().questing = false;
             collision.GetComponent<Player>().quest = "none";
             collision.GetComponent<Player>().questTimer = 0;
         }
