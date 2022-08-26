@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Controls control;
+    public bool cantMove;
     [SerializeField] float speed;
     public Transform movePoint;
     [SerializeField] Collider2D[] cols;
@@ -13,12 +14,15 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameController cont;
     [SerializeField] UnityEngine.UI.Slider slider;
+    [SerializeField] GameObject eHelper;
+    [SerializeField] GameObject[] questCols;
+    public bool questing;
     bool questStarted;
     public bool useQuests;
     public string quest;
     public float questTimer;
     [SerializeField] float value;
-    Animator anim;
+    public Animator anim;
     SpriteRenderer spr;
 
     private void Awake()
@@ -44,8 +48,28 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (cantMove)
+        {
+            control.Disable();
+        } else
+        {
+            control.Enable();
+        }
         if (useQuests)
         {
+            if (questing)
+            {
+                if (questStarted == true)
+                {
+                    eHelper.SetActive(false);
+                } else
+                {
+                    eHelper.SetActive(true);
+                }
+            } else
+            {
+                eHelper.SetActive(false);
+            }
             value = -questTimer;
             if (control.Player.Interate.triggered)
             {
@@ -56,7 +80,7 @@ public class Player : MonoBehaviour
                 if (questStarted)
                 {
                     questTimer -= Time.deltaTime;
-                    control.Disable();
+                    cantMove = true;
                     slider.gameObject.SetActive(true);
                     slider.value = value;
                 }
@@ -64,22 +88,28 @@ public class Player : MonoBehaviour
             {
                 slider.gameObject.SetActive(false);
                 questTimer = 0;
+                if (questStarted)
+                {
+                    cantMove = false;
+                }
                 if (quest == "brush")
                 {
                     cont.questsb[2] = true;
                     quest = "none";
+                    questCols[2].SetActive(false);
                 } else if (quest == "change")
                 {
                     cont.questsb[0] = true;
                     anim.SetBool("Uniforme", true);
                     quest = "none";
+                    questCols[0].SetActive(false);
                 } else if (quest == "eat")
                 {
                     cont.questsb[1] = true;
                     quest = "none";
+                    questCols[1].SetActive(false);
                 }
                 questStarted = false;
-                control.Enable();
             }
         }
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, speed * Time.deltaTime);
