@@ -186,4 +186,8 @@ public class Player : MonoBehaviour
             }
         }
     }
+    public void ControlOnOff(bool b)
+    {
+        cantMove = !b;
+    }
 }
