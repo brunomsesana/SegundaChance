@@ -53,6 +53,7 @@ public class CutsceneController : MonoBehaviour
                 {
                     fala.SetActive(false);
                 }
+                Time.timeScale = 1;
             }
         }
     }
@@ -65,5 +66,9 @@ public class CutsceneController : MonoBehaviour
     {
         paused = false;
         timel.Play();
+    }
+    public void StopTime()
+    {
+        Time.timeScale = 0;
     }
 }

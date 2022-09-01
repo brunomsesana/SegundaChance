@@ -6,7 +6,12 @@ public class Car : MonoBehaviour
 {
     [SerializeField] float modifier;
     float speed;
+    Animator anim;
     public bool moving;
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +25,10 @@ public class Car : MonoBehaviour
         if (moving)
         {
             transform.position = transform.position + new Vector3(1 * modifier  * speed * Time.deltaTime, 0);
+            anim.SetBool("Andando", true);
+        } else
+        {
+            anim.SetBool("Andando", false);
         }
         if (Mathf.Sign(transform.position.x) == 1)
         {

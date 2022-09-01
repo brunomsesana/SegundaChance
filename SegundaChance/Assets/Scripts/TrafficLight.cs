@@ -5,9 +5,9 @@ using UnityEngine;
 public class TrafficLight : MonoBehaviour
 {
     public bool closed;
-    [SerializeField] GameObject col;
     [SerializeField] List<Car> cars;
     [SerializeField] float timerRes;
+    [SerializeField] Sprite[] sprs;
     float timer;
     // Start is called before the first frame update
     void Start()
@@ -34,12 +34,12 @@ public class TrafficLight : MonoBehaviour
         }
         if (closed)
         {
-            GetComponent<SpriteRenderer>().color = Color.green;
+            GetComponent<SpriteRenderer>().sprite = sprs[1];
             //col.SetActive(false);
         } else
         {
             //col.SetActive(true);
-            GetComponent<SpriteRenderer>().color = Color.red;
+            GetComponent<SpriteRenderer>().sprite = sprs[0];
             foreach (Car c in cars)
             {
                 c.moving = true;
