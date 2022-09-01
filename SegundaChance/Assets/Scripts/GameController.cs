@@ -16,10 +16,20 @@ public class GameController : MonoBehaviour
     float timerf = 2f;
     bool started;
     bool questsfinished = true;
+    public static bool timerFinished;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Rua")
+        {
+            if (!timerFinished)
+            {
+                //Debug.Log("Conseguiu");
+            } else
+            {
+                //Debug.Log("Não conseguiu");
+            }
+        }
     }
 
     // Update is called once per frame
@@ -30,9 +40,11 @@ public class GameController : MonoBehaviour
             if ((int)timer > 0)
             {
                 timer -= Time.deltaTime;
+                timerFinished = false;
             } else
             {
                 timer = 0;
+                timerFinished = true;
             }
             if ((int)timer <= 10 && (int)timer > 0)
             {

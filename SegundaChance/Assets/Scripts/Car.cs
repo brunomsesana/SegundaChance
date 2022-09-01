@@ -6,16 +6,21 @@ public class Car : MonoBehaviour
 {
     [SerializeField] float modifier;
     float speed;
+    public bool moving;
     // Start is called before the first frame update
     void Start()
     {
         speed = Random.Range(10, 20);
+        GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + new Vector3(1 * modifier  * speed * Time.deltaTime, 0);
+        if (moving)
+        {
+            transform.position = transform.position + new Vector3(1 * modifier  * speed * Time.deltaTime, 0);
+        }
         if (Mathf.Sign(transform.position.x) == 1)
         {
             if (transform.position.x >= 18)
