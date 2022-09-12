@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rua.unity
     guid: f5a7ebfe5e5e33142bee66d556a7edef
+  - enabled: 1
+    path: "Assets/Scenes/Ponto de \xF4nibus.unity"
+    guid: ac97d5a62c00abe4c9b4d1f9b4da3143
   m_configObjects: {}

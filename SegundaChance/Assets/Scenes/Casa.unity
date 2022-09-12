@@ -26830,7 +26830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211ab586f12e32046a635bc602d8d19e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 1000
+  timer: 60
   text: {fileID: 532780819}
   useTimer: 1
   quests:

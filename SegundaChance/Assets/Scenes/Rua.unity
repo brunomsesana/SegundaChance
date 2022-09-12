@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 2892918}
   - component: {fileID: 2892919}
   - component: {fileID: 2892920}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Carro 1
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -198,13 +198,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 12
   m_Sprite: {fileID: 2464306438850978715, guid: f6dde7f539dd0d14bb170f13092710e4, type: 3}
   m_Color: {r: 1, g: 0.6, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 2
+  m_Size: {x: 6, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -222,7 +222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2892917
 BoxCollider2D:
@@ -234,21 +234,21 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.125}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 6, y: 4}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 6, y: 4}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 4}
+  m_Size: {x: 6, y: 2.25}
   m_EdgeRadius: 0
 --- !u!50 &2892918
 Rigidbody2D:
@@ -987,7 +987,8 @@ GameObject:
   m_Component:
   - component: {fileID: 194617622}
   - component: {fileID: 194617621}
-  m_Layer: 0
+  - component: {fileID: 194617623}
+  m_Layer: 3
   m_Name: "\xD4nibus"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,7 +1034,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0.5689805, b: 0.6886792, a: 1}
   m_FlipX: 0
@@ -1059,6 +1060,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &194617623
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194617620}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.19506842}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.60986316}
+  m_EdgeRadius: 0
 --- !u!1 &226394659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,7 +2511,7 @@ Transform:
   m_GameObject: {fileID: 628385581}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.125, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1358952733}
   m_RootOrder: 0
@@ -2504,7 +2531,7 @@ GameObject:
   - component: {fileID: 667209830}
   - component: {fileID: 667209831}
   - component: {fileID: 667209832}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Carro 2
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -2564,7 +2591,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 12
   m_Sprite: {fileID: 2464306438850978715, guid: f6dde7f539dd0d14bb170f13092710e4, type: 3}
   m_Color: {r: 1, g: 0.60045624, b: 0, a: 1}
   m_FlipX: 1
@@ -2588,7 +2615,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &667209829
 BoxCollider2D:
@@ -2600,10 +2627,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.125}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2614,7 +2641,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 4}
+  m_Size: {x: 6, y: 2.25}
   m_EdgeRadius: 0
 --- !u!50 &667209830
 Rigidbody2D:
@@ -4912,7 +4939,7 @@ Transform:
   m_GameObject: {fileID: 1229837608}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1.125, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1358952733}
   m_RootOrder: 1
@@ -5581,7 +5608,7 @@ Transform:
   m_GameObject: {fileID: 1353272808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.625, y: -0.25, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1358952733}
   m_RootOrder: 2
@@ -6139,7 +6166,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6163,7 +6190,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467554295}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -6200,6 +6227,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00df4a1b50ec7b54492e5129d6a8d606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1468024206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468024208}
+  - component: {fileID: 1468024210}
+  - component: {fileID: 1468024209}
+  m_Layer: 0
+  m_Name: ToPonto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468024208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468024206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4312, y: 7.0529, z: 0}
+  m_LocalScale: {x: 29.6425, y: 2.1743, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1468024209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468024206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c236952de4637847b29d561597785e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cena: "Ponto de \xF4nibus"
+--- !u!61 &1468024210
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468024206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1475473624
 GameObject:
   m_ObjectHideFlags: 0
@@ -7319,7 +7417,7 @@ Transform:
   m_GameObject: {fileID: 1837934202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.625, y: -0.25, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1358952733}
   m_RootOrder: 3
@@ -7588,7 +7686,7 @@ GameObject:
   - component: {fileID: 1897841579}
   - component: {fileID: 1897841578}
   m_Layer: 0
-  m_Name: Quarto
+  m_Name: Vcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

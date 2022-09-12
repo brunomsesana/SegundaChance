@@ -16,11 +16,23 @@ public class Kill : MonoBehaviour
         
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (GetComponent<Car>())
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Rua");
+            if (GetComponent<Car>().moving)
+            {
+                if (collision.gameObject.CompareTag("Player"))
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Rua");
+                }
+            }
+        } else
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Rua");
+            }
         }
     }
 }
