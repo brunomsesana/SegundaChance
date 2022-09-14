@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Bus : MonoBehaviour
 {
-    bool moving;
+    public bool moving;
+    bool startPos;
+    [SerializeField] Collider2D collisor;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +20,31 @@ public class Bus : MonoBehaviour
         {
             if (transform.position.x <= -18)
             {
-                transform.position = new Vector3(17, 0, 0);
+                transform.position = new Vector3(17, transform.position.y);
                 moving = false;
+                startStartMoving(5);
+                startPos = true;
+            }
+            if (startPos)
+            {
+                if (transform.position.x <= 2)
+                {
+                    moving = false;
+                    startStartMoving(5);
+                    transform.position = new Vector3(2, transform.position.y);
+                    startPos = false;
+                }
             }
             transform.position += new Vector3(-0.1f, 0, 0);
+            collisor.enabled = true;
+        } else
+        {
+            collisor.enabled = false;
         }
     }
-    public void startStartMoving()
+    public void startStartMoving(float timer)
     {
-        Invoke("startMoving", 5);
+        Invoke("startMoving", timer);
     }
     void startMoving()
     {
