@@ -7,6 +7,7 @@ public class Bus : MonoBehaviour
     public bool moving;
     bool startPos;
     [SerializeField] Collider2D collisor;
+    public CutsManager cutManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,14 @@ public class Bus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (cutManager.cutscene == "bus2")
+        {
+            if (transform.position.x >= 16)
+            {
+                moving = false;
+            }
+        }
         if (moving)
         {
             if (transform.position.x <= -18)
@@ -29,13 +38,22 @@ public class Bus : MonoBehaviour
             {
                 if (transform.position.x <= 2)
                 {
-                    moving = false;
-                    startStartMoving(5);
-                    transform.position = new Vector3(2, transform.position.y);
-                    startPos = false;
+                        moving = false;
+                        startStartMoving(5);
+                        transform.position = new Vector3(2, transform.position.y);
+                        startPos = false;
+                        if (cutManager.cutscene == "")
+                        {
+                            cutManager.cutscene = "bus1";
+                            cutManager.start = true;
+                        } else if (cutManager.cutscene == "bus1")
+                        {
+                            cutManager.cutscene = "bus2";
+                            cutManager.start = true;
+                        }
                 }
             }
-            transform.position += new Vector3(-0.1f, 0, 0);
+            transform.position += new Vector3(-18f * Time.deltaTime, 0, 0);
             collisor.enabled = true;
         } else
         {

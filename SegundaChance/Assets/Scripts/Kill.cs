@@ -27,7 +27,19 @@ public class Kill : MonoBehaviour
                     UnityEngine.SceneManagement.SceneManager.LoadScene("Rua");
                 }
             }
-        } else
+        }
+        else if (GetComponent<Bus>())
+        {
+            //Consertar isso aqui em
+            if (GetComponent<Bus>().moving)
+            {
+                if (collision.gameObject.CompareTag("Player"))
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Ponto de ônibus");
+                }
+            }
+        } 
+        else
         {
             if (collision.gameObject.CompareTag("Player"))
             {

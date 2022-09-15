@@ -14,6 +14,7 @@ public class CutsceneController : MonoBehaviour
     public Vector3 playerPos;
     public Vector3 finalPos;
     [SerializeField] bool cutStart;
+    [SerializeField] bool dontMovePlayer;
     private void OnEnable()
     {
         control.Enable();
@@ -42,12 +43,18 @@ public class CutsceneController : MonoBehaviour
             {
                 player.GetComponent<Player>().anim.SetInteger("Lado", 1);
             }
-            player.transform.position = playerPos;
-            playerMovePoint.transform.position = player.transform.position;
+            if (!dontMovePlayer)
+            {
+                player.transform.position = playerPos;
+                playerMovePoint.transform.position = player.transform.position;
+            }
             if (control.Timelines.Unpause.triggered)
             {
                 timel.Resume();
-                playerMovePoint.transform.position = finalPos;
+                if (!dontMovePlayer)
+                {
+                    playerMovePoint.transform.position = finalPos;
+                }
                 paused = false;
                 foreach (GameObject fala in falas)
                 {

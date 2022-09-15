@@ -21,8 +21,23 @@ public class BusChanger : MonoBehaviour
         {
             if (!transform.parent.GetComponent<Bus>().moving)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+                if (transform.parent.GetComponent<Bus>().cutManager.cutscene == "")
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Finais");
+                } else if (transform.parent.GetComponent<Bus>().cutManager.cutscene == "bus1")
+                {
+                    collision.GetComponent<Player>().ControlOnOff(false);
+                    Invoke("changeScene", 2);
+                }
+                else
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+                }
             }
         }
+    }
+    void changeScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Trabalho");
     }
 }
