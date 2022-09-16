@@ -8,6 +8,7 @@ public class Bus : MonoBehaviour
     bool startPos;
     [SerializeField] Collider2D collisor;
     public CutsManager cutManager;
+    public bool enteredBus;
     // Start is called before the first frame update
     void Start()
     {

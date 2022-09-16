@@ -32,17 +32,17 @@ public class Car : MonoBehaviour
         }
         if (Mathf.Sign(transform.position.x) == 1)
         {
-            if (transform.position.x >= 18)
+            if (transform.position.x >= 23)
             {
-                transform.position = new Vector3(-18, transform.position.y);
+                transform.position = new Vector3(-23, transform.position.y);
                 GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
                 speed = Random.Range(10, 20);
             }
         } else if (Mathf.Sign(transform.position.x) == -1)
         {
-            if (transform.position.x <= -18)
+            if (transform.position.x <= -23)
             {
-                transform.position = new Vector3(18, transform.position.y);
+                transform.position = new Vector3(23, transform.position.y);
                 GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
                 speed = Random.Range(10, 20);
             }

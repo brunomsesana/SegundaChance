@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BusChanger : MonoBehaviour
 {
+    [SerializeField] Transform player;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +24,18 @@ public class BusChanger : MonoBehaviour
             {
                 if (transform.parent.GetComponent<Bus>().cutManager.cutscene == "")
                 {
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("Finais");
+                    collision.GetComponent<Player>().ControlOnOff(false);
+                    player.gameObject.SetActive(false);
+                    transform.parent.GetComponent<Bus>().enteredBus = true;
+                    Invoke("startMoving", 0.8f);
+                    Invoke("changeSceneFinais", 1.8f);
                 } else if (transform.parent.GetComponent<Bus>().cutManager.cutscene == "bus1")
                 {
                     collision.GetComponent<Player>().ControlOnOff(false);
-                    Invoke("changeScene", 2);
+                    player.gameObject.SetActive(false);
+                    transform.parent.GetComponent<Bus>().enteredBus = true;
+                    Invoke("startMoving", 0.8f);
+                    Invoke("changeSceneTrabalho", 1.8f);
                 }
                 else
                 {
@@ -36,8 +44,16 @@ public class BusChanger : MonoBehaviour
             }
         }
     }
-    void changeScene()
+    void changeSceneTrabalho()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Trabalho");
+    }
+    void changeSceneFinais()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Finais");
+    }
+    void startMoving()
+    {
+        transform.parent.GetComponent<Bus>().moving = true;
     }
 }

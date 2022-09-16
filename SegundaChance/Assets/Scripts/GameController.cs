@@ -17,6 +17,19 @@ public class GameController : MonoBehaviour
     bool started;
     bool questsfinished = true;
     public static bool timerFinished;
+    static bool firstStart = true;
+    [SerializeField] Collider2D cama;
+    [SerializeField] UnityEngine.Playables.PlayableDirector cutStart;
+
+    private void Awake()
+    {
+        if (firstStart)
+        {
+            cama.enabled = false;
+            cutStart.Play();
+            firstStart = false;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

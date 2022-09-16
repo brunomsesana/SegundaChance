@@ -24,7 +24,7 @@ public class Kill : MonoBehaviour
             {
                 if (collision.gameObject.CompareTag("Player"))
                 {
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("Rua");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Casa");
                 }
             }
         }
@@ -33,9 +33,12 @@ public class Kill : MonoBehaviour
             //Consertar isso aqui em
             if (GetComponent<Bus>().moving)
             {
-                if (collision.gameObject.CompareTag("Player"))
+                if (!GetComponent<Bus>().enteredBus)
                 {
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("Ponto de ônibus");
+                    if (collision.gameObject.CompareTag("Player"))
+                    {
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("Casa");
+                    }
                 }
             }
         } 
@@ -43,7 +46,7 @@ public class Kill : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Rua");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Casa");
             }
         }
     }
