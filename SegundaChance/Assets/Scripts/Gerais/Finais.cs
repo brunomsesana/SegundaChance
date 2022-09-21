@@ -9,6 +9,7 @@ public class Finais : MonoBehaviour
     [SerializeField] GameObject ending1;
     [SerializeField] GameObject ending2;
     [SerializeField] GameObject ending3;
+    [SerializeField] GameObject ending6;
     // Start is called before the first frame update
     void Start()
     {
