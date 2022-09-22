@@ -688,6 +688,7 @@ MonoBehaviour:
   ending1: {fileID: 1561833284}
   ending2: {fileID: 681283225}
   ending3: {fileID: 0}
+  ending6: {fileID: 0}
 --- !u!1 &681283225
 GameObject:
   m_ObjectHideFlags: 0

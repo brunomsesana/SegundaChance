@@ -20,11 +20,14 @@ public class GameController : MonoBehaviour
     static bool firstStart = true;
     [SerializeField] Collider2D cama;
     [SerializeField] UnityEngine.Playables.PlayableDirector cutStart;
+    [SerializeField] Player p;
 
     private void Awake()
     {
         if (firstStart)
         {
+            p.transform.position = new Vector3(-8, 2);
+            p.movePoint.position = new Vector3(-8, 2);
             cama.enabled = false;
             cutStart.Play();
             firstStart = false;

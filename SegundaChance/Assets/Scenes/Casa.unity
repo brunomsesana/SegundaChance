@@ -257,6 +257,7 @@ MonoBehaviour:
   thisVCam: {fileID: 1777080523}
   nextVCam: {fileID: 980239935}
   x: 1
+  sideChange: 0
 --- !u!61 &44274713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7244,6 +7245,7 @@ MonoBehaviour:
   thisVCam: {fileID: 625135460}
   nextVCam: {fileID: 980239935}
   x: 1
+  sideChange: 0
 --- !u!61 &343336305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13588,6 +13590,7 @@ MonoBehaviour:
   thisVCam: {fileID: 874405064}
   nextVCam: {fileID: 980239935}
   x: 1
+  sideChange: 0
 --- !u!61 &890397447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13663,6 +13666,7 @@ MonoBehaviour:
   thisVCam: {fileID: 980239935}
   nextVCam: {fileID: 625135460}
   x: 1
+  sideChange: 0
 --- !u!61 &925122102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23485,6 +23489,7 @@ MonoBehaviour:
   thisVCam: {fileID: 980239935}
   nextVCam: {fileID: 1777080523}
   x: 1
+  sideChange: 0
 --- !u!61 &1110694344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24403,6 +24408,7 @@ MonoBehaviour:
   thisVCam: {fileID: 980239935}
   nextVCam: {fileID: 1286705702}
   x: 1
+  sideChange: 0
 --- !u!61 &1246509434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25276,6 +25282,7 @@ MonoBehaviour:
   thisVCam: {fileID: 980239935}
   nextVCam: {fileID: 874405064}
   x: 1
+  sideChange: 0
 --- !u!61 &1508245466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26863,6 +26870,7 @@ MonoBehaviour:
   animCont: {fileID: 9100000, guid: 2968396ba7cf8cd4a8855315f3dead25, type: 2}
   cama: {fileID: 1271503999}
   cutStart: {fileID: 1727647009}
+  p: {fileID: 1752733941}
 --- !u!4 &1867596072
 Transform:
   m_ObjectHideFlags: 0
