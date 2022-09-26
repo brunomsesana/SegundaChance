@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FontSize : MonoBehaviour
 {
-    public static int fontSize = 100;
+    public static int fontSize = 120;
     public int fontButton;
     Button btn;
     ColorBlock whitebtn;

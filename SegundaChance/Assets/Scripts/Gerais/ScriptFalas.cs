@@ -18,6 +18,7 @@ public class ScriptFalas : MonoBehaviour
     [SerializeField] bool startAuto;
     [SerializeField] bool salaReuniao;
     [SerializeField] GameObject pMovePoint;
+    [SerializeField] bool moreThanOnce;
 
     private void Awake()
     {
@@ -86,6 +87,11 @@ public class ScriptFalas : MonoBehaviour
                 fala = 0;
                 started = false;
                 touching = false;
+            }
+            if (moreThanOnce)
+            {
+                fala = 0;
+                started = false;
             }
             yield return null;
         }
