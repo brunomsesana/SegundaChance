@@ -19,6 +19,7 @@ public class ScriptFalas : MonoBehaviour
     [SerializeField] bool salaReuniao;
     [SerializeField] GameObject pMovePoint;
     [SerializeField] bool moreThanOnce;
+    [SerializeField] bool salaChefe;
 
     private void Awake()
     {
@@ -81,6 +82,10 @@ public class ScriptFalas : MonoBehaviour
         {
             p.ControlOnOff(true);
             textoFala.transform.parent.gameObject.SetActive(false);
+            if (salaChefe)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Briga");
+            }
             if (salaReuniao)
             {
                 pMovePoint.transform.position = new Vector3(60, 24);
