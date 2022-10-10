@@ -690,6 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03e2ee0c990dc74688c3a9ed2941b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endings: 0
 --- !u!4 &495339474
 Transform:
   m_ObjectHideFlags: 0
@@ -1696,6 +1697,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Casa
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1100518812}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ChangeStatic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &782777144
@@ -2868,6 +2881,73 @@ MonoBehaviour:
   Brightness: 0
   Contrast: 0
   Sharpness: 0
+--- !u!1 &1100518811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1100518813}
+  - component: {fileID: 1100518812}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1100518812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100518811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82c02d1753c357d40ba99bd7abf0950b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantMove: 0
+  speed: 0
+  movePoint: {fileID: 0}
+  cols: []
+  colLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  questsLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  pauseMenu: {fileID: 0}
+  cont: {fileID: 0}
+  slider: {fileID: 0}
+  eHelper: {fileID: 0}
+  questCols: []
+  questing: 0
+  useQuests: 0
+  quest: 
+  questTimer: 0
+  value: 0
+  anim: {fileID: 0}
+  CanvasBtns: {fileID: 0}
+  Menu: 1
+  Casa: 0
+--- !u!4 &1100518813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100518811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.223316, y: -2.2059455, z: 63.010902}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1205840473
 GameObject:
   m_ObjectHideFlags: 0

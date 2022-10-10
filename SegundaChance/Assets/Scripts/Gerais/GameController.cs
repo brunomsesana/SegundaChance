@@ -17,25 +17,46 @@ public class GameController : MonoBehaviour
     bool started;
     bool questsfinished = true;
     public static bool timerFinished;
-    static bool firstStart = true;
     [SerializeField] Collider2D cama;
     [SerializeField] UnityEngine.Playables.PlayableDirector cutStart;
     [SerializeField] Player p;
     [SerializeField] bool notFirstTime;
+    [SerializeField] TMPro.TMP_Text startLine;
 
     private void Awake()
     {
-        if (notFirstTime)
+        p = GameObject.Find("Player").GetComponent<Player>();
+        if (p.Casa)
         {
-            firstStart = false;
-        }
-        if (firstStart)
-        {
+            switch (Player.lastEnding)
+            {
+                case 0:
+                    if (Player.restarts == 0)
+                    {
+                        startLine.text = "Nossa, estou muito atrasado, tenho que correr!!";
+                    } else
+                    {
+                        startLine.text = "Que sonho esquisito, achei que tinha morrido! Foi tão... realista.";
+                    }
+                    break;
+                case 1:
+                    startLine.text = "É... Um novo dia, não posso perder mais um dia de trabalho.";
+                    break;
+                case 2:
+                    startLine.text = "Droga, não acredito que fui demitido ontem, vou ter que ir até lá e ver se consigo meu emprego de volta";
+                    break;
+                case 3:
+                    startLine.text = "Não acredito que me atrasei tanto assim, espero que não me demitam hoje.";
+                    break;
+                case 4:
+                    startLine.text = "Que? como vim parar aqui? Achei que eu estivesse preso... Espero que o chefe esteja bem, não sei o que deu em mim.";
+                    break;
+            }
             p.transform.position = new Vector3(-8, 2);
             p.movePoint.position = new Vector3(-8, 2);
             cama.enabled = false;
             cutStart.Play();
-            firstStart = false;
+            Player.lastEnding = 0;
         }
     }
     // Start is called before the first frame update
