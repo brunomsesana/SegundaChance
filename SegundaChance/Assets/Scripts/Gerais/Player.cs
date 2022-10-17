@@ -32,6 +32,9 @@ public class Player : MonoBehaviour
     public bool Casa;
     [SerializeField] TMPro.TMP_Text restartCounter;
     public static int lastEnding;
+    public static bool died;
+    public static bool load;
+    public static int saveNum;
 
     private void Awake()
     {
@@ -39,11 +42,11 @@ public class Player : MonoBehaviour
         {
             if (fromMenu)
             {
-                restarts = 0;
-                fromMenu = false;
+                LoadPlayer();
             } else
             {
                 restarts += 1;
+                SavePlayer();
             }
         }
         if (!Menu)
@@ -150,7 +153,7 @@ public class Player : MonoBehaviour
             //rig.velocity = new Vector2(control.Player.XAxis.ReadValue<float>() * speed, control.Player.YAxis.ReadValue<float>() * speed);
             if (Vector3.Distance(transform.position, movePoint.position) == 0f)
             {
-                if (control.Player.YAxis.ReadValue<float>() != 0)
+                if (control.Player.YAxis.ReadValue<float>() != 0 && control.Player.XAxis.ReadValue<float>() <= 0.5f && control.Player.XAxis.ReadValue<float>() >= -0.5f)
                 {
                     if (!cols[0].IsTouchingLayers(colLayer))
                     {
@@ -233,12 +236,37 @@ public class Player : MonoBehaviour
     {
         cantMove = !b;
     }
-    public static void ChangeStatic()
+    public void ChangeStatic()
     {
         fromMenu = true;
     }
     public static void ChangeEnding(int i)
     {
         lastEnding = i;
+    }
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(saveNum);
+    }
+
+    public void LoadPlayer()
+    {
+        if (System.IO.File.Exists(Application.persistentDataPath + "/save" + saveNum + ".exa"))
+        {
+            PlayerData data = SaveSystem.LoadPlayer(saveNum);
+            restarts = data.restarts;
+            lastEnding = data.lastEnding;
+            load = true;
+        } else
+        {
+            load = false;
+            restarts = 0;
+        }
+        fromMenu = false;
+    }
+
+    public void ChooseSave(int num)
+    {
+        saveNum = num;
     }
 }
