@@ -25,7 +25,10 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-        p = GameObject.Find("Player").GetComponent<Player>();
+        if (p == null)
+        {
+            p = GameObject.Find("Player").GetComponent<Player>();
+        }
         if (p.Casa)
         {
             switch (Player.lastEnding)
@@ -45,11 +48,14 @@ public class GameController : MonoBehaviour
                 case 2:
                     startLine.text = "Droga, não acredito que fui demitido ontem, vou ter que ir até lá e ver se consigo meu emprego de volta";
                     break;
-                case 3:
+                case 5:
                     startLine.text = "Não acredito que me atrasei tanto assim, espero que não me demitam hoje.";
                     break;
-                case 4:
+                case 3:
                     startLine.text = "Que? como vim parar aqui? Achei que eu estivesse preso... Espero que o chefe esteja bem, não sei o que deu em mim.";
+                    break;
+                case 4:
+                    startLine.text = "Não acredito que briguei com o chefe ontem... Tenho que ir lá buscar o resto das minhas coisas";
                     break;
             }
             p.transform.position = new Vector3(-8, 2);

@@ -39,7 +39,11 @@ public class BusChanger : MonoBehaviour
                 }
                 else
                 {
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+                    collision.GetComponent<Player>().ControlOnOff(false);
+                    player.gameObject.SetActive(false);
+                    transform.parent.GetComponent<Bus>().enteredBus = true;
+                    Invoke("startMoving", 0.8f);
+                    Invoke("changeSceneFinais2", 1.8f);
                 }
             }
         }
@@ -52,6 +56,11 @@ public class BusChanger : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Finais");
         Finais.ending = 1;
+    }
+    void changeSceneFinais2()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Finais");
+        Finais.ending = 5;
     }
     void startMoving()
     {

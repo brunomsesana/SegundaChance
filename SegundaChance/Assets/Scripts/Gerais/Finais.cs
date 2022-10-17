@@ -9,6 +9,7 @@ public class Finais : MonoBehaviour
     [SerializeField] GameObject ending1;
     [SerializeField] GameObject ending2;
     [SerializeField] GameObject ending3;
+    [SerializeField] GameObject ending4;
     [SerializeField] GameObject ending6;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,12 @@ public class Finais : MonoBehaviour
             } else if (ending == 2)
             {
                 ending2.SetActive(true);
+            } else if (ending == 3)
+            {
+                ending3.SetActive(true);
+            } else if (ending == 4)
+            {
+                ending4.SetActive(true);
             }
         }
     }
