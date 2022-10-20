@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Player p;
     [SerializeField] bool notFirstTime;
     [SerializeField] TMPro.TMP_Text startLine;
+    public static List<int> endingsGot;
 
     private void Awake()
     {
@@ -41,27 +42,46 @@ public class GameController : MonoBehaviour
                 {
                     case 0:
                         startLine.text = "Nossa, estou muito atrasado, tenho que correr!!";
+                        endingsGot = new List<int>();
                         break;
                     case 1:
                         startLine.text = "É... Um novo dia, não posso perder mais um dia de trabalho.";
+                        endingsGot.Add(Player.lastEnding);
                         break;
                     case 2:
                         startLine.text = "Droga, não acredito que fui demitido ontem, vou ter que ir até lá e ver se consigo meu emprego de volta";
-                        break;
-                    case 5:
-                        startLine.text = "Não acredito que me atrasei tanto assim, espero que não me demitam hoje.";
+                        endingsGot.Add(Player.lastEnding);
                         break;
                     case 3:
                         startLine.text = "Como vim parar aqui? Eu estava preso... Espero que o chefe esteja bem, não sei o que deu em mim.";
+                        endingsGot.Add(Player.lastEnding);
                         break;
                     case 4:
                         startLine.text = "Não acredito que briguei com o chefe ontem... Tenho que ir lá buscar o resto das minhas coisas";
+                        endingsGot.Add(Player.lastEnding);
+                        break;
+                    case 5:
+                        startLine.text = "Não acredito que me atrasei tanto assim, espero que não me demitam hoje.";
+                        endingsGot.Add(Player.lastEnding);
                         break;
                 }
             }
             else
             {
                 startLine.text = "Que sonho esquisito, achei que tinha morrido! Foi tão... realista.";
+            }
+            if (endingsGot.Count == 0)
+            {
+                Debug.ClearDeveloperConsole();
+                Debug.Log(null);
+            }
+            else
+            {
+                Debug.ClearDeveloperConsole();
+                foreach (int i in endingsGot)
+                {
+                    Debug.Log(i);
+                }
             }
             p.transform.position = new Vector3(-8, 2);
             p.movePoint.position = new Vector3(-8, 2);

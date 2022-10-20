@@ -32,7 +32,7 @@ public class Bus : MonoBehaviour
             {
                 transform.position = new Vector3(17, transform.position.y);
                 moving = false;
-                startStartMoving(5);
+                startStartMoving(10);
                 startPos = true;
             }
             if (startPos)
@@ -40,7 +40,7 @@ public class Bus : MonoBehaviour
                 if (transform.position.x <= 2)
                 {
                         moving = false;
-                        startStartMoving(10);
+                        startStartMoving(5);
                         transform.position = new Vector3(2, transform.position.y);
                         startPos = false;
                         if (cutManager.cutscene == "")

@@ -7,7 +7,7 @@ public class ScriptFalas : MonoBehaviour
     [SerializeField] string[] falas;
     [SerializeField] bool[] falasBool;
     [SerializeField] bool touching;
-    Player p;
+    [SerializeField] Player p;
     Controls control;
     [SerializeField] TMPro.TMP_Text textoFala;
     [SerializeField] UnityEngine.UI.Image imgCabeca;
@@ -20,6 +20,7 @@ public class ScriptFalas : MonoBehaviour
     [SerializeField] GameObject pMovePoint;
     [SerializeField] bool moreThanOnce;
     [SerializeField] bool salaChefe;
+    [SerializeField] bool touchDisabled;
 
     private void Awake()
     {
@@ -42,16 +43,19 @@ public class ScriptFalas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (touching)
+        if (touching || touchDisabled)
         {
             if (!started)
             {
-                if (control.Player.Interate.triggered)
+                if (!touchDisabled)
                 {
-                    StartCoroutine(Falar());
-                } else if (startAuto)
-                {
-                    StartCoroutine(Falar());
+                    if (control.Player.Interate.triggered)
+                    {
+                        StartCoroutine(Falar());
+                    } else if (startAuto)
+                    {
+                        StartCoroutine(Falar());
+                    }
                 }
             } else
             {
@@ -62,11 +66,12 @@ public class ScriptFalas : MonoBehaviour
             }
         }
     }
-    private IEnumerator Falar()
+    public IEnumerator Falar()
     {
         started = true;
         if (fala < falas.Length)
         {
+            textoFala.gameObject.SetActive(true);
             textoFala.text = falas[fala];
             if (!falasBool[fala])
             {
@@ -75,6 +80,7 @@ public class ScriptFalas : MonoBehaviour
             {
                 imgCabeca.sprite = cabecaPlayer;
             }
+            textoFala.gameObject.SetActive(true);
             textoFala.transform.parent.gameObject.SetActive(true);
             fala += 1;
             p.ControlOnOff(false);
@@ -98,6 +104,7 @@ public class ScriptFalas : MonoBehaviour
                 fala = 0;
                 started = false;
             }
+            textoFala.gameObject.SetActive(false);
             yield return null;
         }
         // just a simple time delay as an example
