@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 3190943}
   - component: {fileID: 3190945}
   - component: {fileID: 3190944}
+  - component: {fileID: 3190946}
   m_Layer: 5
   m_Name: "Descri\xE7\xE3o"
   m_TagString: Untagged
@@ -258,6 +259,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3190942}
   m_CullTransparentMesh: 1
+--- !u!114 &3190946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbada269c7c14749a88bfc021ead393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ending: 3
+  text: "Mateo mentiu seu hor\xE1rio de chegada devido sua desaten\xE7\xE3o e acabou
+    demitido"
 --- !u!1 &28061181
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +419,7 @@ GameObject:
   - component: {fileID: 59822135}
   - component: {fileID: 59822137}
   - component: {fileID: 59822136}
+  - component: {fileID: 59822138}
   m_Layer: 5
   m_Name: "Descri\xE7\xE3o"
   m_TagString: Untagged
@@ -426,7 +443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.321}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -609, y: -492}
+  m_AnchoredPosition: {x: -617, y: -380}
   m_SizeDelta: {x: 657.41, y: 309.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &59822136
@@ -484,7 +501,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -526,6 +543,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59822134}
   m_CullTransparentMesh: 1
+--- !u!114 &59822138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59822134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbada269c7c14749a88bfc021ead393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ending: 2
+  text: "Mateo acaba tendo uma briga com seu chefe por colocar o hor\xE1rio real
+    de entrada devido sua desaten\xE7\xE3o, na briga ele se irrita muito, o agredindo
+    e acabando preso."
 --- !u!1 &185939979
 GameObject:
   m_ObjectHideFlags: 0

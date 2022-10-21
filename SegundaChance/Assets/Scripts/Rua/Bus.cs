@@ -45,10 +45,12 @@ public class Bus : MonoBehaviour
                         startPos = false;
                         if (cutManager.cutscene == "")
                         {
+                            GetComponentInChildren<BusChanger>().touch = true;
                             cutManager.cutscene = "bus1";
                             cutManager.start = true;
                         } else if (cutManager.cutscene == "bus1")
                         {
+                            GetComponentInChildren<BusChanger>().touch = true;
                             cutManager.cutscene = "bus2";
                             cutManager.start = true;
                         }

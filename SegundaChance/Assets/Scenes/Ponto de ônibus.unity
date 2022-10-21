@@ -859,7 +859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188946710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 2, z: 0}
+  m_LocalPosition: {x: -12, y: 3, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 467109547}
@@ -1889,8 +1889,8 @@ MonoBehaviour:
   - {fileID: 1390366218}
   player: {fileID: 188946710}
   playerMovePoint: {fileID: 722362963}
-  playerPos: {x: -8, y: 2, z: 0}
-  finalPos: {x: -8, y: 2, z: 0}
+  playerPos: {x: -8, y: 3, z: 0}
+  finalPos: {x: -8, y: 3, z: 0}
   cutStart: 0
   dontMovePlayer: 1
 --- !u!4 &304253650
@@ -5206,8 +5206,8 @@ MonoBehaviour:
   - {fileID: 306637764}
   player: {fileID: 188946710}
   playerMovePoint: {fileID: 722362963}
-  playerPos: {x: -8, y: 2, z: 0}
-  finalPos: {x: -8, y: 2, z: 0}
+  playerPos: {x: -8, y: 3, z: 0}
+  finalPos: {x: -8, y: 3, z: 0}
   cutStart: 0
   dontMovePlayer: 1
 --- !u!4 &915631265
@@ -9036,6 +9036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 188946716}
   movePoint: {fileID: 722362964}
+  touch: 0
 --- !u!114 &1673150763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9060,7 +9061,7 @@ MonoBehaviour:
   startAuto: 0
   salaReuniao: 0
   pMovePoint: {fileID: 722362963}
-  moreThanOnce: 0
+  moreThanOnce: 1
   salaChefe: 0
   touchDisabled: 1
 --- !u!1 &1673647846
@@ -10824,8 +10825,8 @@ MonoBehaviour:
   - {fileID: 1390366218}
   player: {fileID: 188946710}
   playerMovePoint: {fileID: 722362963}
-  playerPos: {x: -8, y: 2, z: 0}
-  finalPos: {x: -8, y: 2, z: 0}
+  playerPos: {x: -8, y: 3, z: 0}
+  finalPos: {x: -8, y: 3, z: 0}
   cutStart: 0
   dontMovePlayer: 0
 --- !u!4 &2084559969
