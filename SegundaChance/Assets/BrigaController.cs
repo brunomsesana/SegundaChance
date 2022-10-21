@@ -55,11 +55,28 @@ public class BrigaController : MonoBehaviour
     }
     public void DamageChefe(int dano)
     {
-        HPChefe.value -= dano;
+        if (!GameController.endingsGot.Contains(4))
+        {
+            HPChefe.value -= dano;
+        } else
+        {
+            HPChefe.value -= dano + 2;
+        }
     }
 
     public void DamageMateo(int dano)
     {
-        HPMateo.value -= dano;
+        if (GameController.endingsGot.Contains(3))
+        {
+            HPMateo.value -= 4;
+        }
+        else if (GameController.endingsGot.Contains(4))
+        {
+            HPMateo.value -= 1;
+        }
+        else
+        {
+            HPMateo.value -= dano;
+        }
     }
 }

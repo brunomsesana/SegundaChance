@@ -2206,6 +2206,7 @@ MonoBehaviour:
   - Setor Administrativo
   falasBool: 00
   touching: 0
+  p: {fileID: 0}
   textoFala: {fileID: 1867555489}
   imgCabeca: {fileID: 1416708539}
   cabecaOutro: {fileID: 3001843444955814462, guid: 19ec77d9619385d49bd6ea2a64a00ef6, type: 3}
@@ -2215,6 +2216,7 @@ MonoBehaviour:
   pMovePoint: {fileID: 0}
   moreThanOnce: 1
   salaChefe: 0
+  touchDisabled: 0
 --- !u!58 &164774253
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -40194,6 +40196,7 @@ MonoBehaviour:
   - Setor Administrativo
   falasBool: 00
   touching: 0
+  p: {fileID: 0}
   textoFala: {fileID: 1867555489}
   imgCabeca: {fileID: 1416708539}
   cabecaOutro: {fileID: 3001843444955814462, guid: 19ec77d9619385d49bd6ea2a64a00ef6, type: 3}
@@ -40203,6 +40206,7 @@ MonoBehaviour:
   pMovePoint: {fileID: 0}
   moreThanOnce: 1
   salaChefe: 0
+  touchDisabled: 0
 --- !u!58 &543298846
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -40827,6 +40831,7 @@ GameObject:
   - component: {fileID: 572545241}
   - component: {fileID: 572545240}
   - component: {fileID: 572545239}
+  - component: {fileID: 572545242}
   m_Layer: 5
   m_Name: "Colocar Hor\xE1rio Real"
   m_TagString: Untagged
@@ -41032,6 +41037,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572545237}
   m_CullTransparentMesh: 1
+--- !u!114 &572545242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572545237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c7ee3709ab28b4da0f1b51b1dc5326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ending: 3
+  ending2: 4
+  otherBtn: {fileID: 2106418112}
+  otherEnding: 2
+  otherEnding2: 2
+  endingRight: {fileID: 572545239}
 --- !u!1 &578364776
 GameObject:
   m_ObjectHideFlags: 0
@@ -41385,6 +41408,7 @@ MonoBehaviour:
   - Banheiro Masculino
   falasBool: 00
   touching: 0
+  p: {fileID: 0}
   textoFala: {fileID: 1867555489}
   imgCabeca: {fileID: 1416708539}
   cabecaOutro: {fileID: 3001843444955814462, guid: 19ec77d9619385d49bd6ea2a64a00ef6, type: 3}
@@ -41394,6 +41418,7 @@ MonoBehaviour:
   pMovePoint: {fileID: 0}
   moreThanOnce: 1
   salaChefe: 0
+  touchDisabled: 0
 --- !u!58 &609165915
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -43820,6 +43845,7 @@ MonoBehaviour:
   - Sala do Mateo
   falasBool: 00
   touching: 0
+  p: {fileID: 0}
   textoFala: {fileID: 1867555489}
   imgCabeca: {fileID: 1416708539}
   cabecaOutro: {fileID: 3001843444955814462, guid: 19ec77d9619385d49bd6ea2a64a00ef6, type: 3}
@@ -43829,6 +43855,7 @@ MonoBehaviour:
   pMovePoint: {fileID: 0}
   moreThanOnce: 1
   salaChefe: 0
+  touchDisabled: 0
 --- !u!58 &791568506
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -44682,6 +44709,7 @@ MonoBehaviour:
   ending1: {fileID: 0}
   ending2: {fileID: 0}
   ending3: {fileID: 0}
+  ending4: {fileID: 0}
   ending6: {fileID: 0}
 --- !u!4 &825439665
 Transform:
@@ -44992,6 +45020,7 @@ MonoBehaviour:
   - "Sala de Reuni\xF5es"
   falasBool: 00
   touching: 0
+  p: {fileID: 0}
   textoFala: {fileID: 1867555489}
   imgCabeca: {fileID: 1416708539}
   cabecaOutro: {fileID: 3001843444955814462, guid: 19ec77d9619385d49bd6ea2a64a00ef6, type: 3}
@@ -45001,6 +45030,7 @@ MonoBehaviour:
   pMovePoint: {fileID: 0}
   moreThanOnce: 1
   salaChefe: 0
+  touchDisabled: 0
 --- !u!58 &868494339
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -48177,6 +48207,7 @@ MonoBehaviour:
   - Sala do Chefe
   falasBool: 00
   touching: 0
+  p: {fileID: 0}
   textoFala: {fileID: 1867555489}
   imgCabeca: {fileID: 1416708539}
   cabecaOutro: {fileID: 3001843444955814462, guid: 19ec77d9619385d49bd6ea2a64a00ef6, type: 3}
@@ -48186,6 +48217,7 @@ MonoBehaviour:
   pMovePoint: {fileID: 0}
   moreThanOnce: 1
   salaChefe: 0
+  touchDisabled: 0
 --- !u!58 &1187395464
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -49447,6 +49479,7 @@ MonoBehaviour:
   - "Entendi, tenha um \xF3timo dia de trabalho!"
   falasBool: 0001000100
   touching: 0
+  p: {fileID: 0}
   textoFala: {fileID: 1542137658}
   imgCabeca: {fileID: 1416708539}
   cabecaOutro: {fileID: 3001843444955814462, guid: 19ec77d9619385d49bd6ea2a64a00ef6, type: 3}
@@ -49456,6 +49489,7 @@ MonoBehaviour:
   pMovePoint: {fileID: 0}
   moreThanOnce: 0
   salaChefe: 0
+  touchDisabled: 0
 --- !u!1 &1342549858
 GameObject:
   m_ObjectHideFlags: 0
@@ -50188,6 +50222,7 @@ MonoBehaviour:
   - Ah, desculpa!
   falasBool: 0001
   touching: 0
+  p: {fileID: 0}
   textoFala: {fileID: 1542137658}
   imgCabeca: {fileID: 1416708539}
   cabecaOutro: {fileID: 4541600181476535856, guid: 06933c400cde6f846b35405ab17dd50e, type: 3}
@@ -50197,6 +50232,7 @@ MonoBehaviour:
   pMovePoint: {fileID: 225579177}
   moreThanOnce: 0
   salaChefe: 0
+  touchDisabled: 0
 --- !u!58 &1400307274
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -52306,6 +52342,7 @@ MonoBehaviour:
     que descontar do seu sal\xE1rio"
   falasBool: 010001000100
   touching: 0
+  p: {fileID: 0}
   textoFala: {fileID: 1542137658}
   imgCabeca: {fileID: 1416708539}
   cabecaOutro: {fileID: 2287940250583960180, guid: e28f729a6bdedaa429bb0b4e99f8d3c9, type: 3}
@@ -52315,6 +52352,7 @@ MonoBehaviour:
   pMovePoint: {fileID: 0}
   moreThanOnce: 0
   salaChefe: 1
+  touchDisabled: 0
 --- !u!58 &1510379609
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -75119,6 +75157,7 @@ MonoBehaviour:
   - Banheiro Feminino
   falasBool: 00
   touching: 0
+  p: {fileID: 0}
   textoFala: {fileID: 1867555489}
   imgCabeca: {fileID: 1416708539}
   cabecaOutro: {fileID: 3001843444955814462, guid: 19ec77d9619385d49bd6ea2a64a00ef6, type: 3}
@@ -75128,6 +75167,7 @@ MonoBehaviour:
   pMovePoint: {fileID: 0}
   moreThanOnce: 1
   salaChefe: 0
+  touchDisabled: 0
 --- !u!58 &1891798480
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -78615,6 +78655,7 @@ GameObject:
   - component: {fileID: 2106418114}
   - component: {fileID: 2106418113}
   - component: {fileID: 2106418112}
+  - component: {fileID: 2106418115}
   m_Layer: 5
   m_Name: "Mentir Hor\xE1rio"
   m_TagString: Untagged
@@ -78748,6 +78789,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106418110}
   m_CullTransparentMesh: 1
+--- !u!114 &2106418115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106418110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c7ee3709ab28b4da0f1b51b1dc5326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ending: 2
+  ending2: 2
+  otherBtn: {fileID: 572545239}
+  otherEnding: 3
+  otherEnding2: 4
+  endingRight: {fileID: 572545239}
 --- !u!1 &2109529622
 GameObject:
   m_ObjectHideFlags: 0
