@@ -256,6 +256,8 @@ public class Player : MonoBehaviour
             PlayerData data = SaveSystem.LoadPlayer(saveNum);
             restarts = data.restarts;
             lastEnding = data.lastEnding;
+            Debug.Log(data.endingsGot);
+            GameController.endingsGot = new List<int>(data.endingsGot);
             load = true;
         } else
         {

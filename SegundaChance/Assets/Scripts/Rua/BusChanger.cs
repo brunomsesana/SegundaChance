@@ -7,6 +7,9 @@ public class BusChanger : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] Transform movePoint;
     public bool touch;
+    public static bool change;
+    [SerializeField] DigitalRuby.SimpleLUT.SimpleLUT bri;
+    public static float brightness;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,18 +19,20 @@ public class BusChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameController.endingsGot.Contains(5))
+        {
+            if (change)
+            {
+                if (bri.Brightness > -1)
+                {
+                    player.GetComponent<Player>().ControlOnOff(false);
+                    bri.Brightness -= 1.5f * Time.deltaTime;
+                }
+            }
+        }
         if (GameController.endingsGot.Contains(2) && GameController.endingsGot.Contains(3) && GameController.endingsGot.Contains(4) && GameController.endingsGot.Contains(5))
         {
-            if (GameController.endingsGot.Contains(1))
-            {
-                if (touch)
-                {
-                    if (transform.parent.GetComponent<Bus>().cutManager.cutscene == "bus1")
-                    {
-                        changeSceneTrabalho();
-                    }
-                }
-            } else
+            if (!GameController.endingsGot.Contains(1))
             {
                 if (transform.parent.GetComponent<Bus>().cutManager.cutscene == "")
                 {
@@ -124,5 +129,15 @@ public class BusChanger : MonoBehaviour
     void startMoving()
     {
         transform.parent.GetComponent<Bus>().moving = true;
+    }
+    public void changer()
+    {
+        if (GameController.endingsGot.Contains(5) && GameController.endingsGot.Contains(1))
+        {
+            Invoke("changeSceneTrabalho", 1f);
+            brightness = bri.Brightness;
+            change = true;
+            touch = false;
+        }
     }
 }

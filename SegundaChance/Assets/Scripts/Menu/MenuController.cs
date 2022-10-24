@@ -29,4 +29,9 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void InsertEnding(int end)
+    {
+        GameController.endingsGot.Add(end);
+    }
 }

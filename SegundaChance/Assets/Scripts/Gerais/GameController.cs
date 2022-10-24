@@ -46,7 +46,6 @@ public class GameController : MonoBehaviour
                         break;
                     case 1:
                         startLine.text = "É... Um novo dia, não posso perder mais um dia de trabalho.";
-                        endingsGot.Add(Player.lastEnding);
                         break;
                     case 2:
                         startLine.text = "Droga, não acredito que fui demitido ontem, vou ter que ir até lá e ver se consigo meu emprego de volta";
@@ -69,19 +68,6 @@ public class GameController : MonoBehaviour
             else
             {
                 startLine.text = "Que sonho esquisito, achei que tinha morrido! Foi tão... realista.";
-            }
-            if (endingsGot.Count == 0)
-            {
-                Debug.ClearDeveloperConsole();
-                Debug.Log(null);
-            }
-            else
-            {
-                Debug.ClearDeveloperConsole();
-                foreach (int i in endingsGot)
-                {
-                    Debug.Log(i);
-                }
             }
             p.transform.position = new Vector3(-8, 2);
             p.movePoint.position = new Vector3(-8, 2);

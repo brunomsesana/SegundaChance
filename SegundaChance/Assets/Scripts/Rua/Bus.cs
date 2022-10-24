@@ -40,7 +40,7 @@ public class Bus : MonoBehaviour
                 if (transform.position.x <= 2)
                 {
                         moving = false;
-                        startStartMoving(5);
+                        startStartMoving(10);
                         transform.position = new Vector3(2, transform.position.y);
                         startPos = false;
                         if (cutManager.cutscene == "")
