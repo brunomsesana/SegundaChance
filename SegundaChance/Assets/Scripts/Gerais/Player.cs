@@ -271,4 +271,9 @@ public class Player : MonoBehaviour
     {
         saveNum = num;
     }
+
+    public void AddRes()
+    {
+        restarts += 1;
+    }
 }
