@@ -24,20 +24,20 @@ public class CamSetter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player.restarts <= 7)
+        if (Player.restarts <= 3)
         {
-            vig.intensity.value = Player.restarts * 0.05f;
+            vig.intensity.value = Player.restarts * 0.1f;
         } else
         {
-            if (Player.restarts <= 20)
+            if (Player.restarts <= 7)
             {
-                vig.intensity.value = 7 * 0.05f;
-                gra.intensity.value = (Player.restarts - 7) * 0.5f;
+                vig.intensity.value =  3 * 0.1f;
+                gra.intensity.value = (Player.restarts - 3) * 0.7f;
             }
             else
             {
-                vig.intensity.value = 7 * 0.05f;
-                gra.intensity.value = 13 * 0.5f;
+                vig.intensity.value = 3 * 0.1f;
+                gra.intensity.value = 4 * 0.7f;
             }
         }
     }

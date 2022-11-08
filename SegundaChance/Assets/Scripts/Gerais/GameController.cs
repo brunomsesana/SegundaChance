@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
                         startLine.text = "É... Um novo dia, não posso perder mais um dia de trabalho.";
                         break;
                     case 2:
-                        startLine.text = "Droga, não acredito que fui demitido ontem, vou ter que ir até lá e ver se consigo meu emprego de volta";
+                        startLine.text = "Droga, não acredito que fui demitido ontem, tenho que ir lá ver se consigo meu emprego de volta";
                         endingsGot.Add(Player.lastEnding);
                         break;
                     case 3:

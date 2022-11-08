@@ -13,6 +13,9 @@ public class PlayerData
     {
         lastEnding = Player.lastEnding;
         restarts = Player.restarts;
-        endingsGot = GameController.endingsGot.ToArray();
+        if (GameController.endingsGot != null)
+        {
+            endingsGot = GameController.endingsGot.ToArray();
+        }
     }
 }

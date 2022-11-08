@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     public Animator anim;
     SpriteRenderer spr;
     [SerializeField] GameObject CanvasBtns;
-    public static bool VirtualJoycon = true;
+    public static bool VirtualJoycon = false;
     public static int restarts = 0;
     public static bool fromMenu;
     [SerializeField] bool Menu;
@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     public static bool died;
     public static bool load;
     public static int saveNum;
+    [SerializeField] UnityEngine.UI.Button btnmenupause;
 
     private void Awake()
     {
@@ -224,6 +225,7 @@ public class Player : MonoBehaviour
                 {
                     GameController.Pause();
                     pauseMenu.SetActive(true);
+                    btnmenupause.Select();
                     if (VirtualJoycon)
                     {
                         CanvasBtns.SetActive(false);
