@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class ButtonFinale : MonoBehaviour, IPointerEnterHandler
 {
@@ -12,6 +14,15 @@ public class ButtonFinale : MonoBehaviour, IPointerEnterHandler
     [SerializeField] int otherEnding;
     [SerializeField] int otherEnding2;
     [SerializeField] Button endingRight;
+
+    [SerializeField] Move movepoint;
+    [SerializeField] GameObject panel;
+    [SerializeField] CinemachineVirtualCamera salaChefe;
+    [SerializeField] CinemachineVirtualCamera salaMateo;
+    [SerializeField] Move player;
+    [SerializeField] GameObject roomChanger;
+    [SerializeField] GameObject starter;
+    [SerializeField] GameObject starter2;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,19 +33,24 @@ public class ButtonFinale : MonoBehaviour, IPointerEnterHandler
                 if (!GameController.endingsGot.Contains(otherEnding))
                 {
                     GetComponent<Button>().onClick = new Button.ButtonClickedEvent();
-                    GetComponent<Button>().onClick.AddListener(Clicar);
+                    if (ending == 2){
+                        GetComponent<Button>().onClick.AddListener(fim346);
+                    } else {
+                        GetComponent<Button>().onClick.AddListener(fim2);
+                    }
                 }
                 else
                 {
                     if (GameController.endingsGot.Contains(otherEnding2))
                     {
+                        starter = starter2;
                         GetComponent<Button>().onClick = new Button.ButtonClickedEvent();
-                        //Tentar trocar isso aqui para um bot„o com o final verdadeiro e ver se funciona
-                        GetComponent<Button>().onClick.AddListener(ClicarCerto);
+                        //Tentar trocar isso aqui para um bot√£o com o final verdadeiro e ver se funciona
+                        GetComponent<Button>().onClick.AddListener(fim346);
                     } else
                     {
                         GetComponent<Button>().onClick = new Button.ButtonClickedEvent();
-                        GetComponent<Button>().onClick.AddListener(Clicar);
+                        GetComponent<Button>().onClick.AddListener(fim346);
                     }
                 }
             }
@@ -47,13 +63,19 @@ public class ButtonFinale : MonoBehaviour, IPointerEnterHandler
         
     }
 
-    void Clicar()
-    {
-        otherBtn.onClick.Invoke();
+    public void fim2(){
+        Finais.ChangeEnding(2);
+        SceneManager.LoadScene("Finais");
     }
-    void ClicarCerto()
-    {
-        endingRight.onClick.Invoke();
+    public void fim346(){
+        movepoint.MoveIt("100,5/26");
+        panel.SetActive(false);
+        salaChefe.enabled = true;
+        salaMateo.enabled = false;
+        player.MoveIt("100,5/22");
+        typeof(GameController).GetMethod("Unpause").Invoke(null, null);
+        roomChanger.SetActive(false);
+        starter.SetActive(true);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
         {
             if (Player.load)
             {
-                startLine.text = "O que aconteceu? Não me lembro de ter ido dormir ontem...";
+                startLine.text = "O que aconteceu? Nï¿½o me lembro de ter ido dormir ontem...";
             }
             else if (!Player.died)
             {
@@ -45,29 +45,29 @@ public class GameController : MonoBehaviour
                         endingsGot = new List<int>();
                         break;
                     case 1:
-                        startLine.text = "É... Um novo dia, não posso perder mais um dia de trabalho.";
+                        startLine.text = "ï¿½... Um novo dia, nï¿½o posso perder mais um dia de trabalho.";
                         break;
                     case 2:
-                        startLine.text = "Droga, não acredito que fui demitido ontem, tenho que ir lá ver se consigo meu emprego de volta";
+                        startLine.text = "Droga, nï¿½o acredito que fui demitido ontem, tenho que ir lï¿½ ver se consigo meu emprego de volta";
                         endingsGot.Add(Player.lastEnding);
                         break;
                     case 3:
-                        startLine.text = "Como vim parar aqui? Eu estava preso... Espero que o chefe esteja bem, não sei o que deu em mim.";
+                        startLine.text = "Como vim parar aqui? Eu estava preso... Espero que o chefe esteja bem, nï¿½o sei o que deu em mim.";
                         endingsGot.Add(Player.lastEnding);
                         break;
                     case 4:
-                        startLine.text = "Não acredito que briguei com o chefe ontem... Tenho que ir lá buscar o resto das minhas coisas";
+                        startLine.text = "Nï¿½o acredito que briguei com o chefe ontem... Tenho que ir lï¿½ buscar o resto das minhas coisas";
                         endingsGot.Add(Player.lastEnding);
                         break;
                     case 5:
-                        startLine.text = "Não acredito que me atrasei tanto assim, espero que não me demitam hoje.";
+                        startLine.text = "Nï¿½o acredito que me atrasei tanto assim, espero que nï¿½o me demitam hoje.";
                         endingsGot.Add(Player.lastEnding);
                         break;
                 }
             }
             else
             {
-                startLine.text = "Que sonho esquisito, achei que tinha morrido! Foi tão... realista.";
+                startLine.text = "Que sonho esquisito, achei que tinha morrido! Foi tï¿½o... realista.";
             }
             p.transform.position = new Vector3(-8, 2);
             p.movePoint.position = new Vector3(-8, 2);
@@ -87,7 +87,7 @@ public class GameController : MonoBehaviour
                 //Debug.Log("Conseguiu");
             } else
             {
-                //Debug.Log("Não conseguiu");
+                //Debug.Log("Nï¿½o conseguiu");
             }
         }
     }
@@ -188,5 +188,8 @@ public class GameController : MonoBehaviour
         {
             questsb[i] = true;
         }
+    }
+    public void UnpauseDelay(float i){
+        Invoke("Unpause", i);
     }
 }

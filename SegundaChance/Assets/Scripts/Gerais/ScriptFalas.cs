@@ -21,6 +21,7 @@ public class ScriptFalas : MonoBehaviour
     [SerializeField] bool moreThanOnce;
     [SerializeField] bool salaChefe;
     [SerializeField] bool touchDisabled;
+    [SerializeField] bool FimVdd;
 
     private void Awake()
     {
@@ -91,6 +92,11 @@ public class ScriptFalas : MonoBehaviour
             if (salaChefe)
             {
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Briga");
+            }
+            if (FimVdd)
+            {
+                Finais.ChangeEnding(6);
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Finais");
             }
             if (salaReuniao)
             {

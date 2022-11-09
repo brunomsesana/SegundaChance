@@ -21,12 +21,12 @@ public class BrigaController : MonoBehaviour
         if (HPChefe.value <= 0)
         {
             GetComponent<SceneChanger>().ChangeScene("Finais");
-            GetComponent<Finais>().ChangeEnding(3);
+            Finais.ChangeEnding(3);
         }
         if (HPMateo.value <= 0)
         {
             GetComponent<SceneChanger>().ChangeScene("Finais");
-            GetComponent<Finais>().ChangeEnding(4);
+            Finais.ChangeEnding(4);
         }
     }
     public void Attack(GameObject texto)

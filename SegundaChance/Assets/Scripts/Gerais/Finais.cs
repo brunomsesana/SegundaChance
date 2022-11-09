@@ -28,6 +28,9 @@ public class Finais : MonoBehaviour
             } else if (ending == 4)
             {
                 ending4.SetActive(true);
+            } else if (ending == 6)
+            {
+                ending6.SetActive(true);
             }
         }
     }
@@ -37,7 +40,7 @@ public class Finais : MonoBehaviour
     {
         
     }
-    public void ChangeEnding(int end)
+    public static void ChangeEnding(int end)
     {
         ending = end;
     }
