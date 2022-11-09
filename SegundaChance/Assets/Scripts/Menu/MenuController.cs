@@ -6,12 +6,17 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] bool endings;
+    [SerializeField] bool createEndings;
     // Start is called before the first frame update
     void Start()
     {
         if (endings)
         {
             Time.timeScale = 1;
+        }
+        if (createEndings)
+        {
+            GameController.endingsGot = new List<int>();
         }
     }
 
@@ -33,5 +38,13 @@ public class MenuController : MonoBehaviour
     public void InsertEnding(int end)
     {
         GameController.endingsGot.Add(end);
+    }
+
+    public void EndGame()
+    {
+        for (var i = 1; i < 6; i++)
+        {
+            InsertEnding(i);
+        }
     }
 }

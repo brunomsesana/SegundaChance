@@ -29,6 +29,7 @@ public class ButtonFinale : MonoBehaviour, IPointerEnterHandler
                     if (GameController.endingsGot.Contains(otherEnding2))
                     {
                         GetComponent<Button>().onClick = new Button.ButtonClickedEvent();
+                        //Tentar trocar isso aqui para um botão com o final verdadeiro e ver se funciona
                         GetComponent<Button>().onClick.AddListener(ClicarCerto);
                     } else
                     {

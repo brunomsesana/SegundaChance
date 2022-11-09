@@ -13,7 +13,10 @@ public class BusChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GameController.endingsGot == null)
+        {
+            GameController.endingsGot = new List<int>();
+        }
     }
 
     // Update is called once per frame
