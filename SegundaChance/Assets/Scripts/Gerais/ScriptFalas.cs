@@ -22,6 +22,7 @@ public class ScriptFalas : MonoBehaviour
     [SerializeField] bool salaChefe;
     [SerializeField] bool touchDisabled;
     [SerializeField] bool FimVdd;
+    [SerializeField] bool discovery;
 
     private void Awake()
     {
@@ -84,10 +85,19 @@ public class ScriptFalas : MonoBehaviour
             textoFala.gameObject.SetActive(true);
             textoFala.transform.parent.gameObject.SetActive(true);
             fala += 1;
-            p.ControlOnOff(false);
+            if (!discovery)
+            {
+                p.ControlOnOff(false);
+            }
         } else
         {
-            p.ControlOnOff(true);
+            if (!discovery)
+            {
+                p.ControlOnOff(true);
+            } else
+            {
+
+            }
             textoFala.transform.parent.gameObject.SetActive(false);
             if (salaChefe)
             {
@@ -148,5 +158,9 @@ public class ScriptFalas : MonoBehaviour
         {
             touching = false;
         }
+    }
+    public void falar()
+    {
+        StartCoroutine("Falar");
     }
 }

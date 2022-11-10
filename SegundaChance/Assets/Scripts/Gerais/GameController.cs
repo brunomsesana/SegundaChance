@@ -23,58 +23,62 @@ public class GameController : MonoBehaviour
     [SerializeField] bool notFirstTime;
     [SerializeField] TMPro.TMP_Text startLine;
     public static List<int> endingsGot;
+    [SerializeField] bool discovery;
 
     private void Awake()
     {
-        if (p == null)
+        if (!discovery)
         {
-            p = GameObject.Find("Player").GetComponent<Player>();
-        }
-        if (p.Casa)
-        {
-            if (Player.load)
+            if (p == null)
             {
-                startLine.text = "O que aconteceu? N�o me lembro de ter ido dormir ontem...";
+                p = GameObject.Find("Player").GetComponent<Player>();
             }
-            else if (!Player.died)
+            if (p.Casa)
             {
-                switch (Player.lastEnding)
+                if (Player.load)
                 {
-                    case 0:
-                        startLine.text = "Nossa, estou muito atrasado, tenho que correr!!";
-                        endingsGot = new List<int>();
-                        break;
-                    case 1:
-                        startLine.text = "�... Um novo dia, n�o posso perder mais um dia de trabalho.";
-                        break;
-                    case 2:
-                        startLine.text = "Droga, n�o acredito que fui demitido ontem, tenho que ir l� ver se consigo meu emprego de volta";
-                        endingsGot.Add(Player.lastEnding);
-                        break;
-                    case 3:
-                        startLine.text = "Como vim parar aqui? Eu estava preso... Espero que o chefe esteja bem, n�o sei o que deu em mim.";
-                        endingsGot.Add(Player.lastEnding);
-                        break;
-                    case 4:
-                        startLine.text = "N�o acredito que briguei com o chefe ontem... Tenho que ir l� buscar o resto das minhas coisas";
-                        endingsGot.Add(Player.lastEnding);
-                        break;
-                    case 5:
-                        startLine.text = "N�o acredito que me atrasei tanto assim, espero que n�o me demitam hoje.";
-                        endingsGot.Add(Player.lastEnding);
-                        break;
+                    startLine.text = "O que aconteceu? N�o me lembro de ter ido dormir ontem...";
                 }
+                else if (!Player.died)
+                {
+                    switch (Player.lastEnding)
+                    {
+                        case 0:
+                            startLine.text = "Nossa, estou muito atrasado, tenho que correr!!";
+                            endingsGot = new List<int>();
+                            break;
+                        case 1:
+                            startLine.text = "É... Um novo dia, não posso perder mais um dia de trabalho.";
+                            break;
+                        case 2:
+                            startLine.text = "Droga, não acredito que fui demitido, tenho que tentar conseguir meu emprego de volta";
+                            endingsGot.Add(Player.lastEnding);
+                            break;
+                        case 3:
+                            startLine.text = "Como vim parar aqui? Eu estava preso... Espero que o chefe esteja bem, não sei o que deu em mim.";
+                            endingsGot.Add(Player.lastEnding);
+                            break;
+                        case 4:
+                            startLine.text = "Não acredito que briguei com o chefe ontem... Tenho que ir lá buscar o resto das minhas coisas";
+                            endingsGot.Add(Player.lastEnding);
+                            break;
+                        case 5:
+                            startLine.text = "Não acredito que me atrasei tanto assim, espero que não me demitam hoje.";
+                            endingsGot.Add(Player.lastEnding);
+                            break;
+                    }
+                }
+                else
+                {
+                    startLine.text = "Que sonho esquisito, achei que tinha morrido! Foi tão... realista.";
+                }
+                p.transform.position = new Vector3(-8, 2);
+                p.movePoint.position = new Vector3(-8, 2);
+                cama.enabled = false;
+                cutStart.Play();
+                Player.died = false;
+                Player.load = false;
             }
-            else
-            {
-                startLine.text = "Que sonho esquisito, achei que tinha morrido! Foi t�o... realista.";
-            }
-            p.transform.position = new Vector3(-8, 2);
-            p.movePoint.position = new Vector3(-8, 2);
-            cama.enabled = false;
-            cutStart.Play();
-            Player.died = false;
-            Player.load = false;
         }
     }
     // Start is called before the first frame update
@@ -87,7 +91,7 @@ public class GameController : MonoBehaviour
                 //Debug.Log("Conseguiu");
             } else
             {
-                //Debug.Log("N�o conseguiu");
+                //Debug.Log("Não conseguiu");
             }
         }
     }
