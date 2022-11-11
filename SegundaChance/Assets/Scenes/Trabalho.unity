@@ -2218,6 +2218,7 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
 --- !u!58 &164774253
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -39803,7 +39804,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.7176471, g: 0.19607843, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -39946,6 +39947,7 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 1
+  discovery: 0
 --- !u!58 &472530984
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -40331,6 +40333,7 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
 --- !u!58 &543298846
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41565,6 +41568,7 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
 --- !u!58 &609165915
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -42310,7 +42314,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -43188,8 +43192,8 @@ MonoBehaviour:
   questsLayer:
     serializedVersion: 2
     m_Bits: 64
-  pauseMenu: {fileID: 0}
-  cont: {fileID: 0}
+  pauseMenu: {fileID: 172447557}
+  cont: {fileID: 825439667}
   slider: {fileID: 0}
   eHelper: {fileID: 1528734647}
   questCols: []
@@ -43606,7 +43610,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40338b21a10d18546884bc23063e8956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -44005,6 +44009,7 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
 --- !u!58 &791568506
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -44914,6 +44919,7 @@ MonoBehaviour:
   p: {fileID: 755552689}
   notFirstTime: 1
   startLine: {fileID: 0}
+  discovery: 0
 --- !u!114 &825439668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45210,6 +45216,7 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
 --- !u!58 &868494339
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -48398,6 +48405,7 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
 --- !u!58 &1187395464
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -49671,6 +49679,7 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
 --- !u!1 &1342549858
 GameObject:
   m_ObjectHideFlags: 0
@@ -50415,6 +50424,7 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
 --- !u!58 &1400307274
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -50645,7 +50655,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.7176471, g: 0.19607843, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -51443,7 +51453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1447841883
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52748,6 +52758,7 @@ MonoBehaviour:
   salaChefe: 1
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
 --- !u!58 &1510379609
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -53237,7 +53248,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -75671,6 +75682,7 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
 --- !u!58 &1891798480
 CircleCollider2D:
   m_ObjectHideFlags: 0

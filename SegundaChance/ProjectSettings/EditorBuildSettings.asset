@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Briga.unity
     guid: c5caa3d15d0c9cf4d8982e846ddb2e96
+  - enabled: 1
+    path: Assets/Scenes/Final Verdadeiro.unity
+    guid: 0323f2a6bbf39934d85c3d2c4154050e
   m_configObjects: {}
