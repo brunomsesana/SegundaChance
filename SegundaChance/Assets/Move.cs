@@ -16,8 +16,8 @@ public class Move : MonoBehaviour
         
     }
 
-    public void MoveIt(string xy)
+    public void MoveIt(float x, float y)
     {
-        transform.position = new Vector3(float.Parse(xy.Split('/')[0]), float.Parse(xy.Split('/')[1]));
+        transform.position = new Vector3(x, y);
     }
 }
