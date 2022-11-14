@@ -68,14 +68,14 @@ public class ButtonFinale : MonoBehaviour, IPointerEnterHandler
         SceneManager.LoadScene("Finais");
     }
     public void fim346(){
-        movepoint.MoveIt("100,5/26");
-        panel.SetActive(false);
+        GameController.Unpause();
+        movepoint.MoveIt(100.5f, 26f);
+        player.MoveIt(100.5f, 22f);
         salaChefe.enabled = true;
         salaMateo.enabled = false;
-        player.MoveIt("100,5/22");
-        typeof(GameController).GetMethod("Unpause").Invoke(null, null);
         roomChanger.SetActive(false);
         starter.SetActive(true);
+        panel.SetActive(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

@@ -967,7 +967,7 @@ RectTransform:
   - {fileID: 1415742519}
   - {fileID: 327558814}
   m_Father: {fileID: 172447558}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2315,11 +2315,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1535840473}
   - {fileID: 81459271}
   - {fileID: 569879692}
   - {fileID: 863245717}
   - {fileID: 689239367}
+  - {fileID: 1535840473}
   m_Father: {fileID: 378634758}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40939,7 +40939,7 @@ RectTransform:
   - {fileID: 467448177}
   - {fileID: 665028696}
   m_Father: {fileID: 172447558}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -41031,101 +41031,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 225579179}
-        m_TargetAssemblyTypeName: Move, Assembly-CSharp
-        m_MethodName: MoveIt
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 100,5/26
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 297716634}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1436659364}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1619366399}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 755552693}
-        m_TargetAssemblyTypeName: Move, Assembly-CSharp
-        m_MethodName: MoveIt
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 100,5/22
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 825439667}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: Unpause
+      - m_Target: {fileID: 572545242}
+        m_TargetAssemblyTypeName: ButtonFinale, Assembly-CSharp
+        m_MethodName: fim346
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.3
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1376047796}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1162324120}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &572545240
 MonoBehaviour:
@@ -41182,7 +41098,7 @@ MonoBehaviour:
   otherBtn: {fileID: 2106418112}
   otherEnding: 2
   otherEnding2: 2
-  endingRight: {fileID: 2106418112}
+  endingRight: {fileID: 572545239}
   movepoint: {fileID: 225579179}
   panel: {fileID: 297716634}
   salaChefe: {fileID: 1436659364}
@@ -42283,7 +42199,7 @@ RectTransform:
   m_Children:
   - {fileID: 1469768449}
   m_Father: {fileID: 172447558}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -42334,7 +42250,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 825439667}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: SceneChange
         m_Mode: 5
@@ -42344,18 +42260,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Menu
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: Unpause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &689239369
@@ -44866,6 +44770,7 @@ MonoBehaviour:
   ending2: {fileID: 0}
   ending3: {fileID: 0}
   ending4: {fileID: 0}
+  ending5: {fileID: 0}
   ending6: {fileID: 0}
 --- !u!4 &825439665
 Transform:
@@ -44946,7 +44851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endings: 0
-  createEndings: 1
+  createEndings: 0
 --- !u!1 &830956439
 GameObject:
   m_ObjectHideFlags: 0
@@ -45064,7 +44969,7 @@ RectTransform:
   - {fileID: 808819523}
   - {fileID: 782396350}
   m_Father: {fileID: 172447558}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -53217,7 +53122,7 @@ RectTransform:
   m_Children:
   - {fileID: 1723311311}
   m_Father: {fileID: 172447558}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

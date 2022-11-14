@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
             {
                 if (Player.load)
                 {
-                    startLine.text = "O que aconteceu? N�o me lembro de ter ido dormir ontem...";
+                    startLine.text = "O que aconteceu? Não me lembro de ter ido dormir ontem...";
                 }
                 else if (!Player.died)
                 {

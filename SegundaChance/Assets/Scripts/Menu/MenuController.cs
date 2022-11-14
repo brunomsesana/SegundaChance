@@ -42,6 +42,7 @@ public class MenuController : MonoBehaviour
 
     public void EndGame()
     {
+        GameController.endingsGot = new List<int>();
         for (var i = 1; i < 6; i++)
         {
             InsertEnding(i);
