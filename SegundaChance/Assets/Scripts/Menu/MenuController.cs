@@ -30,6 +30,14 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(cena);
     }
 
+    public void SceneDelay(string cena){
+        StartCoroutine(ChangeSceneDelay(cena));
+    }
+    IEnumerator ChangeSceneDelay(string cena){
+        yield return new WaitForSeconds(3);
+        ChangeScene(cena);
+    }
+
     public void Sair()
     {
         Application.Quit();

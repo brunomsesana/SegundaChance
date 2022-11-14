@@ -23,6 +23,7 @@ public class ScriptFalas : MonoBehaviour
     [SerializeField] bool touchDisabled;
     [SerializeField] bool FimVdd;
     [SerializeField] bool discovery;
+    [SerializeField] GameObject video;
 
     private void Awake()
     {
@@ -96,7 +97,7 @@ public class ScriptFalas : MonoBehaviour
                 p.ControlOnOff(true);
             } else
             {
-
+                video.SetActive(true);
             }
             textoFala.transform.parent.gameObject.SetActive(false);
             if (salaChefe)
