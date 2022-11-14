@@ -5,6 +5,7 @@ using UnityEngine;
 public class fade : MonoBehaviour
 {
     bool fading;
+    [SerializeField] Sprite mao;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,14 @@ public class fade : MonoBehaviour
         }
         if (GetComponent<SpriteRenderer>().color.a >= 1){
             fading = false;
+            Invoke("ActiveHand", 0.3f);
         }
+    }
+
+    void ActiveHand()
+    {
+        GetComponent<Animator>().enabled = false;
+        GetComponent<SpriteRenderer>().sprite = mao;
     }
 
     public void Fade(){

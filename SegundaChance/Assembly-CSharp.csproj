@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Gerais\RoomChanger.cs" />
     <Compile Include="Assets\ChangeNext.cs" />
     <Compile Include="Assets\Scripts\Gerais\ColScript.cs" />
+    <Compile Include="Assets\fade.cs" />
     <Compile Include="Assets\Scripts\Rua\Bus.cs" />
     <Compile Include="Assets\Scripts\SaveAndLoad\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Menu\Bright.cs" />

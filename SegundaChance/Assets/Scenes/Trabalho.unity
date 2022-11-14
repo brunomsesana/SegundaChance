@@ -2219,6 +2219,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 0
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &164774253
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -39948,6 +39950,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 1
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &472530984
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -40334,6 +40338,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 0
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &543298846
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41485,6 +41491,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 0
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &609165915
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -43914,6 +43922,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 0
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &791568506
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -45122,6 +45132,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 0
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &868494339
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -48311,6 +48323,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 0
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &1187395464
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -49585,6 +49599,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 0
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!1 &1342549858
 GameObject:
   m_ObjectHideFlags: 0
@@ -50330,6 +50346,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 0
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &1400307274
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -51358,7 +51376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1447841883
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52664,6 +52682,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 0
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &1510379609
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -75588,6 +75608,8 @@ MonoBehaviour:
   touchDisabled: 0
   FimVdd: 0
   discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &1891798480
 CircleCollider2D:
   m_ObjectHideFlags: 0

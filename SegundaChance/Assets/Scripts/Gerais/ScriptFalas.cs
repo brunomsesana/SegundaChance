@@ -24,6 +24,7 @@ public class ScriptFalas : MonoBehaviour
     [SerializeField] bool FimVdd;
     [SerializeField] bool discovery;
     [SerializeField] GameObject video;
+    [SerializeField] AudioSource somTeclado;
 
     private void Awake()
     {
@@ -98,6 +99,7 @@ public class ScriptFalas : MonoBehaviour
             } else
             {
                 video.SetActive(true);
+                somTeclado.Stop();
             }
             textoFala.transform.parent.gameObject.SetActive(false);
             if (salaChefe)
