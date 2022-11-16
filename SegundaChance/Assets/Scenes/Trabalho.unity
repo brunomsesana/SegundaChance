@@ -967,7 +967,7 @@ RectTransform:
   - {fileID: 1415742519}
   - {fileID: 327558814}
   m_Father: {fileID: 172447558}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2218,6 +2218,9 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &164774253
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2314,11 +2317,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1535840473}
   - {fileID: 81459271}
   - {fileID: 569879692}
   - {fileID: 863245717}
   - {fileID: 689239367}
+  - {fileID: 1535840473}
   m_Father: {fileID: 378634758}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39803,7 +39806,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.7176471, g: 0.19607843, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -39946,6 +39949,9 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 1
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &472530984
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -40331,6 +40337,9 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &543298846
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -40936,7 +40945,7 @@ RectTransform:
   - {fileID: 467448177}
   - {fileID: 665028696}
   m_Father: {fileID: 172447558}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -41028,101 +41037,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 225579179}
-        m_TargetAssemblyTypeName: Move, Assembly-CSharp
-        m_MethodName: MoveIt
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 100,5/26
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 297716634}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1436659364}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1619366399}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 755552693}
-        m_TargetAssemblyTypeName: Move, Assembly-CSharp
-        m_MethodName: MoveIt
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 100,5/22
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 825439667}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: Unpause
+      - m_Target: {fileID: 572545242}
+        m_TargetAssemblyTypeName: ButtonFinale, Assembly-CSharp
+        m_MethodName: fim346
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.3
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1376047796}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1162324120}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &572545240
 MonoBehaviour:
@@ -41179,7 +41104,7 @@ MonoBehaviour:
   otherBtn: {fileID: 2106418112}
   otherEnding: 2
   otherEnding2: 2
-  endingRight: {fileID: 2106418112}
+  endingRight: {fileID: 572545239}
   movepoint: {fileID: 225579179}
   panel: {fileID: 297716634}
   salaChefe: {fileID: 1436659364}
@@ -41565,6 +41490,9 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &609165915
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -42279,7 +42207,7 @@ RectTransform:
   m_Children:
   - {fileID: 1469768449}
   m_Father: {fileID: 172447558}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -42310,7 +42238,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -42330,7 +42258,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 825439667}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: SceneChange
         m_Mode: 5
@@ -42340,18 +42268,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Menu
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: Unpause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &689239369
@@ -43188,8 +43104,8 @@ MonoBehaviour:
   questsLayer:
     serializedVersion: 2
     m_Bits: 64
-  pauseMenu: {fileID: 0}
-  cont: {fileID: 0}
+  pauseMenu: {fileID: 172447557}
+  cont: {fileID: 825439667}
   slider: {fileID: 0}
   eHelper: {fileID: 1528734647}
   questCols: []
@@ -43606,7 +43522,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40338b21a10d18546884bc23063e8956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -44005,6 +43921,9 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &791568506
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -44861,6 +44780,7 @@ MonoBehaviour:
   ending2: {fileID: 0}
   ending3: {fileID: 0}
   ending4: {fileID: 0}
+  ending5: {fileID: 0}
   ending6: {fileID: 0}
 --- !u!4 &825439665
 Transform:
@@ -44914,6 +44834,7 @@ MonoBehaviour:
   p: {fileID: 755552689}
   notFirstTime: 1
   startLine: {fileID: 0}
+  discovery: 0
 --- !u!114 &825439668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44940,7 +44861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endings: 0
-  createEndings: 1
+  createEndings: 0
 --- !u!1 &830956439
 GameObject:
   m_ObjectHideFlags: 0
@@ -45058,7 +44979,7 @@ RectTransform:
   - {fileID: 808819523}
   - {fileID: 782396350}
   m_Father: {fileID: 172447558}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -45210,6 +45131,9 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &868494339
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -48398,6 +48322,9 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &1187395464
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -49671,6 +49598,9 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!1 &1342549858
 GameObject:
   m_ObjectHideFlags: 0
@@ -50415,6 +50345,9 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &1400307274
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -50645,7 +50578,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.7176471, g: 0.19607843, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -52748,6 +52681,9 @@ MonoBehaviour:
   salaChefe: 1
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &1510379609
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -53206,7 +53142,7 @@ RectTransform:
   m_Children:
   - {fileID: 1723311311}
   m_Father: {fileID: 172447558}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -53237,7 +53173,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -75671,6 +75607,9 @@ MonoBehaviour:
   salaChefe: 0
   touchDisabled: 0
   FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!58 &1891798480
 CircleCollider2D:
   m_ObjectHideFlags: 0

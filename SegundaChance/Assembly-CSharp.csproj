@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Gerais\RoomChanger.cs" />
     <Compile Include="Assets\ChangeNext.cs" />
     <Compile Include="Assets\Scripts\Gerais\ColScript.cs" />
+    <Compile Include="Assets\fade.cs" />
     <Compile Include="Assets\Scripts\Rua\Bus.cs" />
     <Compile Include="Assets\Scripts\SaveAndLoad\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Menu\Bright.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\Scripts\Gerais\ScriptFalas.cs" />
     <Compile Include="Assets\Scripts\Trabalho\MesaMateo.cs" />
     <Compile Include="Assets\bug.cs" />
+    <Compile Include="Assets\ChangeToWork.cs" />
     <Compile Include="Assets\Scripts\Gerais\CutsceneController.cs" />
     <Compile Include="Assets\AwakeButton.cs" />
     <Compile Include="Assets\Scripts\Gerais\ControllerRua.cs" />
@@ -100,7 +102,6 @@
     <Compile Include="Assets\Scripts\Rua\TrafficLight.cs" />
     <Compile Include="Assets\Scripts\Gerais\Finais.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuController.cs" />
-    <Compile Include="Assets\ChangeToWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

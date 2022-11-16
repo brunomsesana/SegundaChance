@@ -30,6 +30,14 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(cena);
     }
 
+    public void SceneDelay(string cena){
+        StartCoroutine(ChangeSceneDelay(cena));
+    }
+    IEnumerator ChangeSceneDelay(string cena){
+        yield return new WaitForSeconds(3);
+        ChangeScene(cena);
+    }
+
     public void Sair()
     {
         Application.Quit();
@@ -42,6 +50,7 @@ public class MenuController : MonoBehaviour
 
     public void EndGame()
     {
+        GameController.endingsGot = new List<int>();
         for (var i = 1; i < 6; i++)
         {
             InsertEnding(i);
