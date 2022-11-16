@@ -39,17 +39,6 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        if (Casa)
-        {
-            if (fromMenu)
-            {
-                LoadPlayer();
-            } else
-            {
-                restarts += 1;
-                SavePlayer();
-            }
-        }
         if (!Menu)
         {
             control = new Controls();
@@ -77,6 +66,18 @@ public class Player : MonoBehaviour
         if (!Menu)
         {
             movePoint.parent = null;
+        }
+        if (Casa)
+        {
+            if (fromMenu)
+            {
+                LoadPlayer();
+            }
+            else
+            {
+                restarts += 1;
+                SavePlayer();
+            }
         }
     }
 
@@ -258,7 +259,6 @@ public class Player : MonoBehaviour
             PlayerData data = SaveSystem.LoadPlayer(saveNum);
             restarts = data.restarts;
             lastEnding = data.lastEnding;
-            Debug.Log(data.endingsGot);
             GameController.endingsGot = new List<int>(data.endingsGot);
             load = true;
         } else

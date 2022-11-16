@@ -24,7 +24,7 @@ public class Kill : MonoBehaviour
             {
                 if (collision.gameObject.CompareTag("Player"))
                 {
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("Casa");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Alarme");
                     Player.died = true;
                 }
             }
@@ -38,7 +38,7 @@ public class Kill : MonoBehaviour
                 {
                     if (collision.gameObject.CompareTag("Player"))
                     {
-                        UnityEngine.SceneManagement.SceneManager.LoadScene("Casa");
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("Alarme");
                         Player.died = true;
                     }
                 }
@@ -48,7 +48,7 @@ public class Kill : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Casa");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Alarme");
                 Player.died = true;
             }
         }
