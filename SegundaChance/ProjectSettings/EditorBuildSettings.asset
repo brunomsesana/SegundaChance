@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Verdadeiro.unity
     guid: 0323f2a6bbf39934d85c3d2c4154050e
+  - enabled: 1
+    path: Assets/Scenes/Alarme.unity
+    guid: 7c514adb5d25c394cba4f56fcb87ef3d
   m_configObjects: {}
