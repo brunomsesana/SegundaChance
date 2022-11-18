@@ -9092,6 +9092,10 @@ MonoBehaviour:
   moreThanOnce: 1
   salaChefe: 0
   touchDisabled: 1
+  FimVdd: 0
+  discovery: 0
+  video: {fileID: 0}
+  somTeclado: {fileID: 0}
 --- !u!1 &1673647846
 GameObject:
   m_ObjectHideFlags: 0

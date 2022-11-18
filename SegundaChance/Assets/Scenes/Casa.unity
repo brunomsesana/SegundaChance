@@ -28818,6 +28818,7 @@ MonoBehaviour:
   p: {fileID: 1752733941}
   notFirstTime: 0
   startLine: {fileID: 1497120122}
+  discovery: 0
 --- !u!4 &1867596072
 Transform:
   m_ObjectHideFlags: 0

@@ -56,4 +56,9 @@ public class MenuController : MonoBehaviour
             InsertEnding(i);
         }
     }
+
+    public void AddRes()
+    {
+        Player.restarts += 7;
+    }
 }
