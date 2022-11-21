@@ -51376,7 +51376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1447841883
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51443,7 +51443,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 825439669}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: AddRes
+        m_MethodName: EndGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
