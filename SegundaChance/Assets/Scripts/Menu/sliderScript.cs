@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DigitalRuby.SimpleLUT;
+using UnityEngine.EventSystems;
 
-public class sliderScript : MonoBehaviour
+public class sliderScript : MonoBehaviour, IDeselectHandler, ISelectHandler
 {
     Slider slider;
     [SerializeField] bool brightness;
@@ -30,10 +31,24 @@ public class sliderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void VolumeChanger()
     {
         AudioListener.volume = slider.value / 100;
+    }
+    
+    public void OnDeselect(BaseEventData data)
+    {
+        if (GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().Stop();
+        }
+    }
+    public void OnSelect(BaseEventData data){
+        if (!GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().Play();
+        }
     }
 }

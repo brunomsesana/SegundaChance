@@ -25,7 +25,8 @@ public class GameController : MonoBehaviour
     public static List<int> endingsGot;
     [SerializeField] bool discovery;
 
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
         if (!discovery)
         {
@@ -80,10 +81,6 @@ public class GameController : MonoBehaviour
                 Player.load = false;
             }
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Rua")
         {
             if (!timerFinished)

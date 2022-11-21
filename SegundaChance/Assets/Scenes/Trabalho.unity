@@ -2203,7 +2203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   falas:
-  - Setor Administrativo
+  - Recursos Humanos
   falasBool: 00
   touching: 0
   p: {fileID: 0}
@@ -49478,6 +49478,7 @@ GameObject:
   - component: {fileID: 1341580328}
   - component: {fileID: 1341580327}
   - component: {fileID: 1341580329}
+  - component: {fileID: 1341580330}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -49601,6 +49602,19 @@ MonoBehaviour:
   discovery: 0
   video: {fileID: 0}
   somTeclado: {fileID: 0}
+--- !u!114 &1341580330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341580325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be42abfdb4ffe947b9aa9a47fb32d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eHelper: {fileID: 1528734647}
 --- !u!1 &1342549858
 GameObject:
   m_ObjectHideFlags: 0
